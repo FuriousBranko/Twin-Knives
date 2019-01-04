@@ -1,0 +1,49 @@
+<section id="footer">
+    <div class="container">
+        <div class="row footer-bottom">
+            <div class="col-md-6 col-sm-12 footer-columns">
+                <img src="images/logo.png" alt="footer-logo" class="img-responsive">
+                <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+            </div>
+            <div class="col-md-3 col-sm-12 footer-bottom-col2">
+                <h6>ADDRESS</h6>
+                <p>58 Ralph Ave</p>
+                <p>New York,New York 1111</p>
+                <p><a href="tel:+1 800 000 111">P:+1 800 000 111</a></p>
+                <p><a href="https://demo.drupalfreethemes.com/cdn-cgi/l/email-protection#aecdc1c0dacfcddaeecbd6cfc3dec2cb80cdc1c3">E:<span class="__cf_email__" data-cfemail="9dfef2f3e9fcfee9ddf8e5fcf0edf1f8b3fef2f0">[email&#160;protected]</span></a></p>
+            </div>
+            <div class="col-md-3 col-sm-12 footer-bottom-col3">
+                <h6>OPENING HOURS</h6>
+                <p>Monday - Sunday</p>
+                <p>Lunch: 12PM - 2PM</p>
+                <p>Dinner: 6PM - 10PM</p>
+                <p>Happy Hours: 4PM - 6PM</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer-menu-social">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 footer-menu">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-social">
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-md-6 mx-auto text-center copyright">
+                    <p> &copy;2018.<a href="#" class="our-info">YG Restaurant</a>. All Rights Reserved.<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
