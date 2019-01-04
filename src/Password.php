@@ -4,8 +4,6 @@ require_once dirname(__DIR__) . '/config/configuration.php';
 
 class Password {
 
-    private $_password;
-
     // $password is typed by user, if criteria is okay
     // return is hashed password
     public function new(string $password)
