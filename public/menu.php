@@ -25,8 +25,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 mx-auto top-banner-caption">
-						<h1 class="wow fadeInUp" data-wow-delay="0.3s">Menu</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+						<h1>Menu</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 					</div>
 				</div>
 			</div>
@@ -37,8 +37,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="text-center wow fadeInUp" data-wow-delay="0.2s">Vegan Menu</h2>
-					<div class="menu-listing-1 wow fadeInUp" data-wow-delay="0.3s">
+					<h2 class="text-center">Vegan Menu</h2>
+					<div class="menu-listing-1">
 						<div class="col-md-5 menu-image">
 							<div class="menu-inner-image">
 								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
@@ -50,7 +50,7 @@
 							<p class="price"><span>$</span>10</p>
 						</div>
 					</div>
-					<div class="menu-listing-1 wow fadeInUp" data-wow-delay="0.6s">
+					<div class="menu-listing-1">
 						<div class="col-md-5 menu-image">
 							<div class="menu-inner-image">
 								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
@@ -62,7 +62,7 @@
 							<p class="price"><span>$</span>10</p>
 						</div>
 					</div>
-					<div class="menu-listing-1 wow fadeInUp" data-wow-delay="0.3s">
+					<div class="menu-listing-1">
 						<div class="col-md-5 menu-image">
 							<div class="menu-inner-image">
 								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
@@ -74,7 +74,7 @@
 							<p class="price"><span>$</span>10</p>
 						</div>
 					</div>
-					<div class="menu-listing-1 wow fadeInUp" data-wow-delay="0.6s">
+					<div class="menu-listing-1">
 						<div class="col-md-5 menu-image">
 							<div class="menu-inner-image">
 								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
@@ -86,7 +86,7 @@
 							<p class="price"><span>$</span>10</p>
 						</div>
 					</div>
-					<div class="menu-listing-1 wow fadeInUp" data-wow-delay="0.3s">
+					<div class="menu-listing-1">
 						<div class="col-md-5 menu-image">
 							<div class="menu-inner-image">
 								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
@@ -98,7 +98,7 @@
 							<p class="price"><span>$</span>10</p>
 						</div>
 					</div>
-					<div class="menu-listing-1 wow fadeInUp" data-wow-delay="0.6s">
+					<div class="menu-listing-1">
 						<div class="col-md-5 menu-image">
 							<div class="menu-inner-image">
 								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
@@ -120,8 +120,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 mx-auto menu-page-about-caption">
-						<h2 class="wow fadeInUp" data-wow-delay="0.3s">Lorem Ipsum</h2>
-						<p class="wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+						<h2>Lorem Ipsum</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 					</div>
 				</div>
 			</div>
@@ -132,10 +132,10 @@
 	<section class="menu">
 		<div class="container">
 			<div class="col-md-12">
-				<h2 class="text-center wow fadeInUp" data-wow-delay="0.2s">Non Veg</h2>
+				<h2 class="text-center">Non Veg</h2>
 			</div>
 			<div class="row">
-				<div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-12 menu-listing-3 menu-item">
 							<h3>Starter</h3>
@@ -200,7 +200,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-12 menu-listing-3 menu-item">
 							<h3>Starter</h3>
@@ -265,7 +265,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow fadeInUp" data-wow-delay="0.9s">
+				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-12 menu-listing-3 menu-item">
 							<h3>Starter</h3>
@@ -332,7 +332,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-12 menu-listing-3 menu-item">
 							<h3>Starter</h3>
@@ -385,7 +385,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-12 menu-listing-3 menu-item">
 							<h3>Starter</h3>
@@ -438,7 +438,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 wow fadeInUp" data-wow-delay="0.9s">
+				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-12 menu-listing-3 menu-item">
 							<h3>Starter</h3>
@@ -500,14 +500,14 @@
 		<div class="reservation-overlay">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 mr-auto restaurant-info wow fadeInRight" data-wow-delay="0.3s">
+					<div class="col-md-6 mr-auto restaurant-info wow fadeInRight"="0.3s">
 						<p>For catering inquiries / Hall Reservation</p>
 						<h6>Contact <span>Restaurant</span></h6>
 						<h6>123-456-7890</h6>
 						<a href="https://demo.drupalfreethemes.com/cdn-cgi/l/email-protection#50393e363f1022352324312522313e247e333f3d"><span class="__cf_email__" data-cfemail="462f28202906342335322733342728326825292b">[email&#160;protected]</span></a><br>
 						<a href="#">www.restaurant.com</a>
 					</div>
-					<div class="col-md-5 reservation-form wow fadeInLeft" data-wow-delay="0.3s">
+					<div class="col-md-5 reservation-form wow fadeInLeft"="0.3s">
 						<div class="reservation-form-inner">
 							<h3>Reservation</h3>
 							<form>
@@ -570,10 +570,8 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/superfish.min.js"></script>
-<script src="js/wow.min.js"></script>
 <script src="js/magnific-popup.min.js"></script>
 <script src="../../../../../cdn.jsdelivr.net/npm/gijgo%401.9.10/js/gijgo.min.js" type="text/javascript"></script>
-<script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/carousel.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/main.js"></script>

@@ -25,8 +25,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 mx-auto top-banner-caption">
-						<h1 class="wow fadeInUp" data-wow-delay="0.3s">Contact</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+						<h1>Contact</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 					</div>
 				</div>
 			</div>
@@ -37,11 +37,11 @@
 	<section id="get-in-touch">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-sm-12 contact-details wow fadeInUp" data-wow-delay="0.3s">
+				<div class="col-md-8 col-sm-12 contact-details">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.31566551444!2d-74.26055712301496!3d40.69714774517821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1528368737139"
 					 width="600" height="475" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
-				<div class="col-md-4 reservation-form wow fadeInUp" data-wow-delay="0.6s">
+				<div class="col-md-4 reservation-form">
 					<div class="reservation-form-inner">
 						<h3>Contact Form</h3>
 						<form>
@@ -73,10 +73,8 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/superfish.min.js"></script>
-<script src="js/wow.min.js"></script>
 <script src="js/magnific-popup.min.js"></script>
 <script src="../../../../../cdn.jsdelivr.net/npm/gijgo%401.9.10/js/gijgo.min.js" type="text/javascript"></script>
-<script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/carousel.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/main.js"></script>

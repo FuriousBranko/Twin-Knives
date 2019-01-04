@@ -25,8 +25,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 mx-auto top-banner-caption">
-						<h1 class="wow fadeInUp" data-wow-delay="0.3s">Reservation</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+						<h1>Reservation</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 					</div>
 				</div>
 			</div>
@@ -36,10 +36,10 @@
 	<section id="facilities">
 		<div class="container">
 			<div class="row hall-reservation">
-				<div class="col-md-6 reservation-image wow fadeInUp" data-wow-delay="0.3s">
+				<div class="col-md-6 reservation-image">
 					<img src="images/restaurant.jpg" alt="team-image" class="img-responsive">
 				</div>
-				<div class="col-md-6 reservation-time wow fadeInUp" data-wow-delay="0.6s">
+				<div class="col-md-6 reservation-time">
 					<div class="col-md-4 mx-auto text-center">
 						<h2>Hall <span>Lorem</span></h2>
 					</div>
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 			<div class="row hall-reservation">
-				<div class="col-md-6 reservation-time wow fadeInUp" data-wow-delay="0.6s">
+				<div class="col-md-6 reservation-time">
 					<div class="col-md-4 mx-auto text-center">
 						<h2>Bar <span>Lorem</span></h2>
 					</div>
@@ -63,7 +63,7 @@
 						<a href="#reservation" class="btn btn-info page-scroll">Book Now</a>
 					</div>
 				</div>
-				<div class="col-md-6 reservation-image wow fadeInUp" data-wow-delay="0.3s">
+				<div class="col-md-6 reservation-image">
 					<img src="images/bar.jpg" alt="team-image" class="img-responsive">
 				</div>
 			</div>
@@ -75,8 +75,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 mx-auto menu-page-about-caption">
-						<h2 class="wow fadeInUp" data-wow-delay="0.3s">Lorem Ipsum</h2>
-						<p class="wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+						<h2>Lorem Ipsum</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 					</div>
 				</div>
 			</div>
@@ -85,10 +85,10 @@
 	<section id="facilities">
 		<div class="container">
 			<div class="row hall-reservation">
-				<div class="col-md-6 reservation-image wow fadeInUp" data-wow-delay="0.3s">
+				<div class="col-md-6 reservation-image">
 					<img src="images/dish.jpg" alt="team-image" class="img-responsive">
 				</div>
-				<div class="col-md-6 reservation-time wow fadeInUp" data-wow-delay="0.6s">
+				<div class="col-md-6 reservation-time>
 					<div class="col-md-4 mx-auto text-center">
 						<h2>Food <span>Lorem</span></h2>
 					</div>
@@ -106,14 +106,14 @@
 		<div class="reservation-overlay">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 mr-auto restaurant-info wow fadeInRight" data-wow-delay="0.3s">
+					<div class="col-md-6 mr-auto restaurant-info">
 						<p>For catering inquiries / Hall Reservation</p>
 						<h6>Contact <span>Restaurant</span></h6>
 						<h6>123-456-7890</h6>
 						<a href="https://demo.drupalfreethemes.com/cdn-cgi/l/email-protection#462f28202906342335322733342728326825292b"><span class="__cf_email__" data-cfemail="61080f070e2113041215001413000f154f020e0c">[email&#160;protected]</span></a><br>
 						<a href="#">www.restaurant.com</a>
 					</div>
-					<div class="col-md-5 reservation-form wow fadeInLeft" data-wow-delay="0.3s">
+					<div class="col-md-5 reservation-form">
 						<div class="reservation-form-inner">
 							<h3>Reservation</h3>
 							<form>
@@ -176,10 +176,8 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/superfish.min.js"></script>
-<script src="js/wow.min.js"></script>
 <script src="js/magnific-popup.min.js"></script>
 <script src="../../../../../cdn.jsdelivr.net/npm/gijgo%401.9.10/js/gijgo.min.js" type="text/javascript"></script>
-<script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/carousel.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/main.js"></script>

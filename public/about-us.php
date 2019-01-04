@@ -25,8 +25,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 mx-auto top-banner-caption">
-						<h1 class="wow fadeInUp" data-wow-delay="0.3s">About Us</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et vestibulum enim. Curabitur non orci vitae neque convallis.</p>
+						<h1>About Us</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et vestibulum enim. Curabitur non orci vitae neque convallis.</p>
 					</div>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 	<section id="about" class="about-us-page">
 		<div class="container">
 			<div class="row about-respons">
-				<div class="col-md-9 ml-auto about-caption-outer wow fadeInLeft" data-wow-delay="0.9s">
+				<div class="col-md-9 ml-auto about-caption-outer">
 					<div class="about-caption">
 						<img src="images/slider.jpg" alt="about-bg-img" class="img-responsive">
 						<h3>We Make Delicious Foods Since 1952.</h3>
@@ -46,7 +46,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-5 server-img wow fadeInUp" data-wow-delay="0.2s">
+			<div class="col-md-5 server-img">
 				<img src="images/cook.png" class="img-responsive" alt="server-images">
 			</div>
 		</div>
@@ -57,22 +57,22 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6 about-page-image">
-					<div class="col-md-12 our-restaurant-image wow fadeInRight" data-wow-delay="0.3s">
+					<div class="col-md-12 our-restaurant-image">
 						<img src="images/restaurant_1.jpg" alt="team-image" class="img-responsive">
 					</div>
-					<div class="col-md-12 our-restaurant-info wow fadeInLeft" data-wow-delay="0.6s">
+					<div class="col-md-12 our-restaurant-info"="0.6s">
 						<h2>Lorem Ipsum</h2>
 						<p>Lorem ipsum is simply dummy text of the printing and typesetting industryLorem ipsum is simply dummy text of the printing and typesetting industryLorem ipsum is simply dummy text.Lorem ipsum is simply dummy text of the printing and
 							typesetting.Lorem ipsum is simply dummy text of the printing.</p>
 					</div>
 				</div>
 				<div class="col-md-6 about-page-image">
-					<div class="col-md-12 our-restaurant-info wow fadeInLeft" data-wow-delay="0.9s">
+					<div class="col-md-12 our-restaurant-info">
 						<h2>Lorem Ipsum</h2>
 						<p>Lorem ipsum is simply dummy text of the printing and typesetting industryLorem ipsum is simply dummy text of the printing and typesetting industryLorem ipsum is simply dummy text.Lorem ipsum is simply dummy text of the printing and
 							typesetting.Lorem ipsum is simply dummy text of the printing.</p>
 					</div>
-					<div class="col-md-12 our-restaurant-image wow fadeInRight" data-wow-delay="0.9s">
+					<div class="col-md-12 our-restaurant-image">
 						<img src="images/restaurant_2.jpg" alt="team-image" class="img-responsive">
 					</div>
 				</div>
@@ -85,14 +85,14 @@
 		<div class="reservation-overlay">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 mr-auto restaurant-info wow fadeInRight" data-wow-delay="0.3s">
+					<div class="col-md-6 mr-auto restaurant-info">
 						<p>For catering inquiries / Hall Reservation</p>
 						<h6>Contact <span>Restaurant</span></h6>
 						<h6>123-456-7890</h6>
 						<a href="https://demo.drupalfreethemes.com/cdn-cgi/l/email-protection#70191e161f3002150304110502111e045e131f1d"><span class="__cf_email__" data-cfemail="deb7b0b8b19eacbbadaabfabacbfb0aaf0bdb1b3">[email&#160;protected]</span></a><br>
 						<a href="#">www.restaurant.com</a>
 					</div>
-					<div class="col-md-5 reservation-form wow fadeInLeft" data-wow-delay="0.3s">
+					<div class="col-md-5 reservation-form">
 						<div class="reservation-form-inner">
 							<h3>Reservation</h3>
 							<form>
@@ -155,10 +155,8 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/superfish.min.js"></script>
-<script src="js/wow.min.js"></script>
 <script src="js/magnific-popup.min.js"></script>
 <script src="../../../../../cdn.jsdelivr.net/npm/gijgo%401.9.10/js/gijgo.min.js" type="text/javascript"></script>
-<script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/carousel.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/main.js"></script>
