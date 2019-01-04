@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -27,7 +27,7 @@
 						<span class="fadeInUp">Welcome to</span>
 						<h2 class="fadeInUp">Twin Knives</h2>
 						<p class="fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-						<a href="menu.html" class="btn btn-info view-btn fadeInUp">VIEW MENU</a>
+						<a href="menu.php" class="btn btn-info view-btn fadeInUp">VIEW MENU</a>
 					</div>
 				</div>
 
@@ -71,7 +71,7 @@
 									<h4>LOREM IPSUM</h4>
 									<p>CATEGORY</p>
 									<h5>$25</h5>
-									<a href="detail-page.html" class="btn btn-info">VIEW</a>
+									<a href="detail-page.php" class="btn btn-info">VIEW</a>
 								</div>
 							</div>
 						</div>
@@ -84,7 +84,7 @@
 									<h4>LOREM IPSUM</h4>
 									<p>CATEGORY</p>
 									<h5>$25</h5>
-									<a href="detail-page.html" class="btn btn-info">VIEW</a>
+									<a href="detail-page.php" class="btn btn-info">VIEW</a>
 								</div>
 							</div>
 						</div>
@@ -97,7 +97,7 @@
 									<h4>LOREM IPSUM</h4>
 									<p>CATEGORY</p>
 									<h5>$25</h5>
-									<a href="detail-page.html" class="btn btn-info">VIEW</a>
+									<a href="detail-page.php" class="btn btn-info">VIEW</a>
 								</div>
 							</div>
 						</div>
@@ -110,7 +110,7 @@
 									<h4>LOREM IPSUM</h4>
 									<p>CATEGORY</p>
 									<h5>$25</h5>
-									<a href="detail-page.html" class="btn btn-info">VIEW</a>
+									<a href="detail-page.php" class="btn btn-info">VIEW</a>
 								</div>
 							</div>
 						</div>
@@ -134,7 +134,8 @@
 <script src="js/carousel.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
 
-<!-- Mirrored from demo.drupalfreethemes.com/drupal/free-themes-html/yg-restaurant/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 21:20:44 GMT -->
+<!-- Mirrored from demo.drupalfreethemes.com/drupal/free-themes-php/yg-restaurant/dark/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Dec 2018 21:20:44 GMT -->
 
-</html>
+</php>
