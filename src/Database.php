@@ -2,25 +2,34 @@
 
 require_once dirname(__DIR__) . '/config/configuration.php';
 
-class Database {
+class Database
+{
 
-    protected static $instance;
+    private static $_instance;
+    private $_connection;
 
-    protected function __construct() {}
+    private function __construct()
+    {
+        $this->_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        if($this->_connection->error) {
+            exit("Error : " . $this->_connection->error);
+        }
+    }
+
+    // magic method clone is empty to prevent duplication of connection
+    private function __clone() {}
 
     public static function getInstance()
     {
-        if(empty(self::$instance)) {
-            try {
-                self::$instance = new PDO("mysql:host=".DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
-                self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
-                self::$instance->query('SET NAMES utf8');
-                self::$instance->query('SET CHARACTER SET utf8');
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-            }
+        if(empty(self::$_instance)) {
+            self::$_instance = new self();
         }
-        return self::$instance;
+        return self::$_instance;
+    }
+
+    public function getConnection()
+    {
+        return $this->_connection;
     }
 
 }

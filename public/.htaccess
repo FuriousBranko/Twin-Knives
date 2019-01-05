@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^index?$ index.php
+RewriteRule ^about-us?$ about-us.php
+RewriteRule ^contact-us?$ contact-us.php
+RewriteRule ^menu?$ menu.php
+RewriteRule ^reservation?$ reservation.php
+RewriteRule ^login?$ login.php
+RewriteRule ^404?$ 404.php
