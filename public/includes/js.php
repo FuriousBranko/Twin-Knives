@@ -2,6 +2,7 @@
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/superfish.min.js"></script>
+<script src="js/wow.min.js"></script>
 <script src="js/magnific-popup.min.js"></script>
 <script src="../../../../../cdn.jsdelivr.net/npm/gijgo%401.9.10/js/gijgo.min.js" type="text/javascript"></script>
 <script src="js/carousel.js"></script>

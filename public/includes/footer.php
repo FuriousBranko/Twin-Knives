@@ -7,17 +7,16 @@
             </div>
             <div class="col-md-3 col-sm-12 footer-bottom-col2">
                 <h6>ADDRESS</h6>
-                <p>58 Ralph Ave</p>
-                <p>New York,New York 1111</p>
-                <p><a href="tel:+1 800 000 111">P:+1 800 000 111</a></p>
-                <p><a href="https://demo.drupalfreethemes.com/cdn-cgi/l/email-protection#aecdc1c0dacfcddaeecbd6cfc3dec2cb80cdc1c3">E:<span class="__cf_email__" data-cfemail="9dfef2f3e9fcfee9ddf8e5fcf0edf1f8b3fef2f0">[email&#160;protected]</span></a></p>
+                <p>Majšanski Put 666</p>
+                <p>Subotica 24000</p>
+                <p><a href="tel:+1 800 000 111">P:061 234 5678</a></p>
+                <p><a href="#">E:<span class="__cf_email__" data-cfemail="9dfef2f3e9fcfee9ddf8e5fcf0edf1f8b3fef2f0">[email&#160;protected]</span></a></p>
             </div>
             <div class="col-md-3 col-sm-12 footer-bottom-col3">
                 <h6>OPENING HOURS</h6>
-                <p>Monday - Sunday</p>
-                <p>Lunch: 12PM - 2PM</p>
-                <p>Dinner: 6PM - 10PM</p>
-                <p>Happy Hours: 4PM - 6PM</p>
+                <p>Monday - Sunday: 07h - 22h</p>
+                <p>Lunch: 12h - 14h</p>
+                <p>Dinner: 18h - 21h</p>
             </div>
         </div>
     </div>
@@ -41,7 +40,7 @@
                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-md-6 mx-auto text-center copyright">
-                    <p> &copy;2018.<a href="#" class="our-info">YG Restaurant</a>. All Rights Reserved.<br></p>
+                    <p> &copy;2019 <a href="#" class="our-info">Noo.ddl</a> All Rights Reserved.<br></p>
                 </div>
             </div>
         </div>

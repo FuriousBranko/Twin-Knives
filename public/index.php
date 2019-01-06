@@ -4,13 +4,14 @@
 <?php
     $title = "TwinKnives";
     $keywords = "Something, very, interesting, about, this, hackaton";
-    $description = "Something very interesting";
+	$description = "Something very interesting";
+	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
 ?>
 
 <body>
     <?php require_once 'includes/navigation.php'; ?>
-	<section id="yg-slider">
+	<section id="head">
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item active" style="background-image: url('images/banner.jpg')">
 					<div class="carousel-caption">
@@ -53,8 +54,8 @@
 			</div>
 			<div class="row">
 				<div class="owl-carousel special-menu-carousel">
-					<div class="item">
-						<div class="col-md-12 col-sm-12 special-menu-items">
+					<div class="item wow">
+						<div class="col-md-12 col-sm-12">
 							<div class="hovereffect">
 								<a href="#"><img src="images/thumb1.jpg" alt="special menu item"></a>
 								<div class="overlay">
@@ -66,8 +67,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="item">
-						<div class="col-md-12 col-sm-12 special-menu-items">
+					<div class="item wow">
+						<div class="col-md-12 col-sm-12">
 							<div class="hovereffect">
 								<a href="#"><img src="images/thumb2.jpg" alt="special menu item"></a>
 								<div class="overlay">
@@ -79,8 +80,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="item">
-						<div class="col-md-12 col-sm-12 special-menu-items">
+					<div class="item wow">
+						<div class="col-md-12 col-sm-12">
 							<div class="hovereffect">
 								<a href="#"><img src="images/thumb3.jpg" alt="special menu item"></a>
 								<div class="overlay">
@@ -92,8 +93,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="item">
-						<div class="col-md-12 col-sm-12 special-menu-items">
+					<div class="item wow">
+						<div class="col-md-12 col-sm-12">
 							<div class="hovereffect">
 								<a href="#"><img src="images/thumb4.jpg" alt="special menu item"></a>
 								<div class="overlay">
