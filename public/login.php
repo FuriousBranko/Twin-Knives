@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
 <html lang="en">
 
 <?php
@@ -11,8 +12,8 @@
     if(isset($_POST['login'])) {
         Validation::login($_POST['email'], $_POST['password']);
     }
+    if(!Session::exist('user')):
 ?>
-
 <body>
     <div class="row">
         <div class="reservation-form-inner col-md-6 offset-md-3">
@@ -32,4 +33,10 @@
         </div>
     </div>
 </body>
+<?php
+    else:
+        echo "Yo.<br>";
+        echo "<a href=\"index\">Go back to index</a>";
+    endif;
+?>
 </html>

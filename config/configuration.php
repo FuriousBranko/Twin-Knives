@@ -8,3 +8,7 @@
     spl_autoload_register(function ($class_name) {
         require_once dirname(__DIR__) . '/src/' . $class_name . '.php';
     });
+
+    if(!isset($_SESSION)) {
+        session_start();
+    }

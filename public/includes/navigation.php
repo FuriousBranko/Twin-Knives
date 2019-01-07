@@ -9,7 +9,11 @@
                     <li class="nav-item"> <a id="reservation" class="nav-link" href="reservation">Reservation</a> </li>
                     <!-- <li class="nav-item"> <a class="nav-link" href="contact-us.html">Gallery</a> </li> -->
                     <li class="nav-item"> <a id="contactUs" class="nav-link" href="contact-us">Contact Us</a> </li>
-                    <li class="nav-item"> <a id="login" class="nav-link" href="login">Log In</a> </li>
+                    <?php if(!Session::exist('user')): ?>
+                        <li class="nav-item"> <a id="login" class="nav-link" href="login">Log In</a> </li>
+                    <?php else: ?>
+                        <li class="nav-item"> <a id="order" class="nav-link" href="order">Order</a> </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>

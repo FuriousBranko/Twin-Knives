@@ -7,19 +7,20 @@ class Validation
 
     public static function login(string $email, string $password)
     {
-        $sql = "SELECT password FROM users WHERE email = '$email';";
+        $sql = "SELECT id, password FROM users WHERE email = '$email';";
         $result = Database::getInstance()->getConnection()->query($sql);
-
+        $userId = "";
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 $hash = $row['password'];
+                $userId = $row['id'];
             }
         } else {
             // check your email
         }
 
         if(Password::verify($password, $hash)) {
-            echo "Nice";
+            return Session::new('user', $userId);
         } else {
             // check your password
         }

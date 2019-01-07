@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
 <html lang="en">
 
 <?php
@@ -24,7 +25,6 @@
 
 	</section>
 
-
 	<section id="about">
 		<div class="container">
 			<div class="row about-respons">
@@ -42,9 +42,6 @@
 			</div>
 		</div>
 	</section>
-
-
-
 
 	<section id="special-menu">
 		<div class="container">
