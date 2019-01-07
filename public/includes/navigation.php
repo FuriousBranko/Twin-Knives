@@ -12,7 +12,15 @@
                     <?php if(!Session::exist('user')): ?>
                         <li class="nav-item"> <a id="login" class="nav-link" href="login">Log In</a> </li>
                     <?php else: ?>
-                        <li class="nav-item"> <a id="profile" class="nav-link" href="profile">Profile</a> </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link" href="profile" id="navbarDropdownProfileLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Profile <i class="fa fa-chevron-down"></i></a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownProfileLink">
+                                <a class="dropdown-item" href="index.php">Orders</a>
+                                <a class="dropdown-item" href="index.php">Logout</a>
+                            </div>
+                        </li>
                     <?php endif; ?>
                 </ul>
             </div>
