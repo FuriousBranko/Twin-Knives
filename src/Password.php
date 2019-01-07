@@ -16,11 +16,10 @@ class Password
     // $hash -> fetched from database
     public static function verify(string $password, string $hash)
     {
-        $hash // fetched
         if(password_verify($password, $hash)) {
-            // logged in
+            return true;
         } else {
-            // redirected
+            return false;
         }
     }
 

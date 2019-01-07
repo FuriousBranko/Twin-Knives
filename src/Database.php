@@ -32,4 +32,26 @@ class Database
         return $this->_connection;
     }
 
+    // username or email
+    public function login(string $email, string $password)
+    {
+        $sql = "SELECT password FROM users WHERE email = '$email';";
+        $result = $this->_connection->query($sql);
+
+        if($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $hash = $row['password'];
+            }
+        } else {
+            // check your email
+        }
+
+        if(Password::verify($password, $hash)) {
+            echo "Nice";
+        } else {
+            // check your password
+        }
+
+    }
+
 }
