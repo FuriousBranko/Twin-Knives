@@ -54,4 +54,35 @@ class Database
 
     }
 
+    public function register(array $data)
+    {
+
+        $error = 0;
+
+        foreach($data as $key => $value) {
+            $$key = $value;
+        }
+
+        if($password === $rePassword) {
+            $password = Password::new($password);
+        } else {
+            $error++;
+        }
+
+        if(!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
+            $error++;
+        }
+
+        if(!$error) {
+            $sql = "INSERT INTO users(firstName, lastName, address, phoneNumber, password, email) ";
+            $sql.= "VALUES('$firstName', '$lastName', '$address', '$phone', '$password', '$email');";
+
+            if($result = $this->_connection->query($sql)) {
+                echo "Success!";
+            } else {
+                echo "Error: " . $sql . "<br>" . $this->_connection->error;
+            }
+        }
+    }
+
 }
