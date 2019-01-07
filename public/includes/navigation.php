@@ -12,7 +12,7 @@
                     <?php if(!Session::exist('user')): ?>
                         <li class="nav-item"> <a id="login" class="nav-link" href="login">Log In</a> </li>
                     <?php else: ?>
-                        <li class="nav-item"> <a id="order" class="nav-link" href="order">Order</a> </li>
+                        <li class="nav-item"> <a id="profile" class="nav-link" href="profile">Profile</a> </li>
                     <?php endif; ?>
                 </ul>
             </div>
