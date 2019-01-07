@@ -15,10 +15,10 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item active" style="background-image: url('images/banner.jpg')">
 					<div class="carousel-caption">
-						<span class="fadeInUp">Welcome to</span>
-						<h2 class="fadeInUp">Twin Knives</h2>
-						<p class="fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-						<a href="menu.php" class="btn btn-info view-btn fadeInUp">VIEW MENU</a>
+						<span class="wow fadeInUp">Welcome to</span>
+						<h2 class="fonthead wow fadeInUp">Twin Knives</h2>
+						<p class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+						<a href="menu.php" class="btn btn-info view-btn wow fadeInUp">VIEW MENU</a>
 					</div>
 				</div>
 
@@ -37,7 +37,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-5 server-img">
+			<div class="col-md-5 server-img wow fadeInUp">
 				<img src="images/cook.png" class="img-responsive" alt="server-images">
 			</div>
 		</div>

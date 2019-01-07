@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row footer-bottom">
             <div class="col-md-6 col-sm-12 footer-columns">
-                <img src="images/logo.png" alt="footer-logo" class="img-responsive">
+                <img src="images/TwinKnives.png" alt="footer-logo" class="img-responsive">
                 <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
             </div>
             <div class="col-md-3 col-sm-12 footer-bottom-col2">

@@ -4,7 +4,8 @@
 <?php
     $title = "TwinKnives";
     $keywords = "Something, very, interesting, about, this, hackaton";
-    $description = "Something very interesting";
+	$description = "Something very interesting";
+	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
 ?>
 
@@ -28,8 +29,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-sm-12 contact-details">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.31566551444!2d-74.26055712301496!3d40.69714774517821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1528368737139"
-					 width="600" height="475" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44223.380474511854!2d19.639734717839833!3d46.15151715334472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4743645b0bdc9173%3A0x30e862ce68217b4b!2sMakova+Sedmica%2C+Subotica!5e0!3m2!1sen!2srs!4v1546821380626" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 				<div class="col-md-4 reservation-form">
 					<div class="reservation-form-inner">
@@ -42,7 +42,7 @@
 								<input type="email" class="form-control" id="email" placeholder="Email">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="email" placeholder="Phone NUmber">
+								<input type="text" class="form-control" id="email" placeholder="Phone Number">
 							</div>
 							<div class="form-group">
 								<textarea class="form-control" id="email" placeholder="Message" rows="5"></textarea>

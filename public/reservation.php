@@ -4,7 +4,8 @@
 <?php
     $title = "TwinKnives";
     $keywords = "Something, very, interesting, about, this, hackaton";
-    $description = "Something very interesting";
+	$description = "Something very interesting";
+	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
 ?>
 
