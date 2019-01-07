@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    $title = "TwinKnives";
+    $title = "Login";
     $keywords = "Something, very, interesting, about, this, hackaton";
 	$description = "Something very interesting";
 	$authors = "Radivoje Pupovac & Branko Sabo";

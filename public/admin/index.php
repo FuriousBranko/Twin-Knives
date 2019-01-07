@@ -13,16 +13,28 @@
 ?>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>Admin panel</title>
+    <?php
+    $title = "Admin Panel";
+    $keywords = "Something, very, interesting, about, this, hackaton";
+	$description = "Something very interesting";
+	$authors = "Radivoje Pupovac & Branko Sabo";
+    require_once '../includes/headData.php';
+?>
     </head>
     <body>
-        <form action="index.php" method="post">
-            <label for="username">Username: </label>
-            <input type="text" name="username" id="username">
-            <label for="password">Password: </label>
-            <input type="password" name="password" id="password">
-            <input type="submit" name="submit">
-        </form>
-    </body>
+<div class="reservation-form-inner">
+						<h3>Login</h3>
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control" id="username" placeholder="Admin Meister">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="password" placeholder="Password">
+							</div>
+							<div class="form-btn text-center">
+								<a href="#" class="btn btn-info">Login</a><br>
+							</div>
+						</form>
+					</div>
+</body>
 </html>
