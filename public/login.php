@@ -10,7 +10,7 @@
     require_once 'includes/headData.php';
     require_once dirname(__DIR__) . '/config/configuration.php';
     if(isset($_POST['login'])) {
-        Validation::login($_POST['email'], $_POST['password']);
+        User::login($_POST['email'], $_POST['password']);
     }
     if(!Session::exist('user')):
 ?>
@@ -27,7 +27,7 @@
         		</div>
         		<div class="form-btn text-center">
                     <button type="submit" class="btn btn-info" name="login">Submit</button>
-                    <a href="#">Forgotten Password</a>
+                    <a href="forgottenpassword.php">Forgotten Password</a>
         		</div>
         	</form>
         </div>
@@ -35,8 +35,7 @@
 </body>
 <?php
     else:
-        echo "Yo.<br>";
-        echo "<a href=\"index\">Go back to index</a>";
+        header("Location: index");
     endif;
 ?>
 </html>

@@ -2,7 +2,7 @@
 
 require_once dirname(__DIR__) . '/config/configuration.php';
 
-class Validation
+class User
 {
 
     public static function login(string $email, string $password)
@@ -55,6 +55,26 @@ class Validation
                 echo "Error: " . $sql . "<br>" . Database::getInstance()->getConnection()->error;
             }
         }
+    }
+
+    // return true/false
+    public static function forgottenPassword(string $email)
+    {
+
+        $error = 0;
+
+        if(!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
+            return false;
+        }
+        $sql = "SELECT * FROM users WHERE email = '$email';";
+        $result = Database::getInstance()->getConnection()->query($sql);
+
+        if($result->num_rows > 0) {
+            // send email
+        } else {
+            // check email
+        }
+
     }
 
 }

@@ -10,7 +10,7 @@
     require_once 'includes/headData.php';
     require_once dirname(__DIR__) . '/config/configuration.php';
     if(isset($_POST['register'])) {
-        Validation::register($_POST);
+        User::register($_POST);
     }
 ?>
 
