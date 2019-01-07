@@ -40,7 +40,7 @@
                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-md-6 mx-auto text-center copyright">
-                    <p> &copy;2019 <a href="#" class="our-info">Noo.ddl</a> All Rights Reserved.<br></p>
+                    <p> &copy;2019 <a href="#" class="our-info">Secret</a> All Rights Reserved.<br></p>
                 </div>
             </div>
         </div>

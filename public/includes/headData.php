@@ -5,7 +5,7 @@
 	<meta content="<?php echo $keywords; ?>" name="keywords">
 	<meta content="<?php echo $description; ?>" name="description">
 	<meta content="<?php echo $authors; ?>" name="author">
-	<meta content="Noo.dll" name="copyright">
+	<meta content="Still Secret" name="copyright">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
