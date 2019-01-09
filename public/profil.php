@@ -37,19 +37,19 @@
     <!-- samo za info -->
     <form action="#" method="post">
         <div class="form-group">
-            <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name" required>
+            <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
         </div>
         <div class="form-group">
-            <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name" required>
+            <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name">
         </div>
         <div class="form-group">
-            <input type="text" name="address" class="form-control" id="address" placeholder="Address" required>
+            <input type="text" name="address" class="form-control" id="address" placeholder="Address">
         </div>
         <div class="form-group">
-            <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
         </div>
         <div class="form-group">
-            <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone" required>
+            <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone">
         </div>
         <!-- Ako oces da stavimo da mora da se unese password da moze da potvrdi?
         <div class="form-group">
