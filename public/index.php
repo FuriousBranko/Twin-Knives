@@ -22,7 +22,7 @@
 						<a href="menu.php" class="btn btn-info view-btn wow fadeInUp">VIEW MENU</a>
 					</div>
 				</div>
-
+			</div>
 	</section>
 
 	<section id="about">

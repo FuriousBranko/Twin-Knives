@@ -15,7 +15,7 @@
     if(!Session::exist('user')):
 ?>
 <body>
-    <div class="row">
+<div id="container">
         <div class="reservation-form-inner col-md-6 offset-md-3">
         	<h3>Login</h3>
         	<form action="#" method="post">
@@ -26,12 +26,13 @@
         			<input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
         		</div>
         		<div class="form-btn text-center">
-                    <button type="submit" class="btn btn-info" name="login">Submit</button>
+                    <button type="submit" class="btn btn-info" name="login">Submit</button><br>
+                    <a href="registration.php">Register</a>
                     <a href="forgottenpassword.php">Forgotten Password</a>
         		</div>
         	</form>
         </div>
-    </div>
+</div>
 </body>
 <?php
     else:

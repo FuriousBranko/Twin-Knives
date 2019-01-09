@@ -25,6 +25,42 @@
 		</div>
 	</section>
 
+<section>
+	<form action="#" class="serach-form-area">
+		<div class="row justify-content-center form-wrap">
+			<div class="col-lg-4 form-cols">
+				<input type="text" class="form-control" name="search" placeholder="what are you looging for?">
+			</div>
+			<div class="col-lg-3 form-cols">
+				<div class="form-group" id="default-selects"">
+					<select class=" form-control">
+					<option value="1">Price Down</option>
+					<option value="2">Price Up</option>
+					<option value="3">Vegan</option>
+					<option value="4">Keto</option>
+					</select>
+				</div>
+			</div>
+			<!-- oces ovako da moze da bira samo 1 sastojak ili vise ? -->
+			<div class="col-lg-3 form-cols">
+				<div class="form-group" id="default-selects2">
+					<select class="form-control">
+						<option value="1">All</option>
+						<option value="2">Egg</option>
+						<option value="3">Tomato</option>
+						<option value="4">Beef</option>
+						<option value="5">Chicken</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-lg-2 form-cols">
+				<div class="form-btn text-center">
+					<button type="submit" class="btn btn-info" name="search">Search</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</section>
 	<section class="menu">
 		<div class="container">
 			<div class="row">
