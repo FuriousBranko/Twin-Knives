@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<base href = "http://localhost/twin-knives/public/" />
 <?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
 <html lang="en">
 <?php
@@ -6,6 +7,7 @@
     $keywords = "Something, very, interesting, about, this, hackaton";
     $description = "Something very interesting";
     require_once 'includes/headData.php';
+    $food = Food::fetch($_GET['id']);
 ?>
 
 <body>
@@ -17,7 +19,7 @@
                 <div class="row">
                     <div class="col-md-7 mx-auto top-banner-caption">
                         <h1>Menu Details</h1>
-                        <p><!-- Ovde ako oces da stavis da ispise Naziv isto, ako ne mozemo ga ostaviti prazno--></p>
+                        <p><?php echo $food['name']; ?></p>
                     </div>
                 </div>
             </div>
@@ -29,21 +31,26 @@
             <div class="row">
                 <div class="col-md-6 special-menu-detail-image">
                     <img src="images/banner1.jpg" alt="special menu detail image" class="img-responsive">
+                    <!-- <img src="<?php echo $food['image']; ?>" alt="special menu detail image" class="img-responsive"> -->
                 </div>
                 <div class="col-md-6 special-menu-content">
-                    <h3><!-- Naziv--></h3>
-                    <h6><!-- Vrsta ( vegan, keto itd ) --></h6>
-                    <p><!--Opis i sastojci--></p>
-                    <h4>Price<span><!--Cena--></span></h4>
+                    <h3><?php echo $food['name']; ?></h3>
+                    <h6><?php echo "Vrsta"; ?></h6>
+                    <p><?php foreach($food['information'] as $key => $value) {
+                        echo "$key : $value <br>";
+                    } ?></p>
+                    <h4>Price<span><?php echo $food['price']; ?></span></h4>
                     <div class="special-menu-btn">
+                    <?php if(!Session::exist('user')): ?>
+                        <a href="register" class="btn btn-info">Add</a>
+                    <?php else: ?>
                         <a href="#" class="btn btn-info">Add</a>
+                    <?php endif; ?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <?php require_once 'includes/footer.php' ?>
     <script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
