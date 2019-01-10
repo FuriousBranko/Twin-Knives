@@ -18,7 +18,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownProfileLink">
                                 <a class="dropdown-item" href="profil.php">Profil</a>
                                 <a class="dropdown-item" href="order.php">Orders</a>
-                                <a class="dropdown-item" href="index.php">Logout</a>
+                                <a class="dropdown-item" href="logout.php">Logout</a>
                             </div>
                         </li>
                     <?php endif; ?>

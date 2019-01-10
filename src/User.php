@@ -7,6 +7,7 @@ class User
 
     public static function login(string $email, string $password)
     {
+        $errors = [];
         $sql = "SELECT id, password FROM users WHERE email = '$email';";
         $result = Database::getInstance()->getConnection()->query($sql);
         $userId = "";
@@ -16,13 +17,13 @@ class User
                 $userId = $row['id'];
             }
         } else {
-            // check your email
+            $errors[] = "Check your email.";
         }
 
         if(Password::verify($password, $hash)) {
             return Session::new('user', $userId);
         } else {
-            // check your password
+            $errors[] = "Check your password.";
         }
     }
 
@@ -70,7 +71,13 @@ class User
         $result = Database::getInstance()->getConnection()->query($sql);
 
         if($result->num_rows > 0) {
-            // send email
+            $emailHash = md5($email);
+            $subject = "Password reset";
+            $message = "Reset your password : <a href=\"forgottenpassword.php&key=$emailHash\"> here </a>";
+            echo $message;
+            // if(mail($email, $subject, $message)) {
+            //     return true;
+            // }
         } else {
             // check email
         }

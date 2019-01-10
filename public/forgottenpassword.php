@@ -11,7 +11,7 @@
         if(User::forgottenPassword($_POST['email'])){
             // true
         } else {
-            echo "Check your email again.";
+            echo "Try again.";
         }
     }
 ?>

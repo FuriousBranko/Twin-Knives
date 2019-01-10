@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="icon" href="images/twinknives.ico" type="image/x-icon">
 	<link href="../../../../../cdn.jsdelivr.net/npm/gijgo%401.9.10/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/carousel.css" rel="stylesheet">
