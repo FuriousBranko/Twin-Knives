@@ -17,7 +17,7 @@
                                 Profile <i class="fa fa-chevron-down"></i></a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownProfileLink">
                                 <a class="dropdown-item" href="profil.php">Profil</a>
-                                <a class="dropdown-item" href="index.php">Orders</a>
+                                <a class="dropdown-item" href="order.php">Orders</a>
                                 <a class="dropdown-item" href="index.php">Logout</a>
                             </div>
                         </li>

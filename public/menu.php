@@ -25,13 +25,13 @@
 		</div>
 	</section>
 
-<section>
+<section class="container">
 	<form action="#" class="serach-form-area">
-		<div class="row justify-content-center form-wrap">
+		<div class="row justify-content-center">
 			<div class="col-lg-4 form-cols">
 				<input type="text" class="form-control" name="search" placeholder="what are you looging for?">
 			</div>
-			<div class="col-lg-3 form-cols">
+			<div class="col-lg-3 col-md-2 form-cols">
 				<div class="form-group" id="default-selects"">
 					<select class=" form-control">
 					<option value="1">Price Down</option>
@@ -42,7 +42,7 @@
 				</div>
 			</div>
 			<!-- oces ovako da moze da bira samo 1 sastojak ili vise ? -->
-			<div class="col-lg-3 form-cols">
+			<div class="col-lg-3 col-md-2 form-cols">
 				<div class="form-group" id="default-selects2">
 					<select class="form-control">
 						<option value="1">All</option>
@@ -53,7 +53,7 @@
 					</select>
 				</div>
 			</div>
-			<div class="col-lg-2 form-cols">
+			<div class="col-lg-2 col-md-2 form-cols">
 				<div class="form-btn text-center">
 					<button type="submit" class="btn btn-info" name="search">Search</button>
 				</div>
