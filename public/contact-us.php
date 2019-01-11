@@ -8,6 +8,10 @@
 	$description = "Something very interesting";
 	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
+    // if(isset($_POST['submit'])) {
+    //     Mail::contactForm($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['message']);
+    //     $message = Mail::getAnswer();
+    // }
 ?>
 
 <body>
@@ -35,22 +39,23 @@
 				<div class="col-md-4 reservation-form">
 					<div class="reservation-form-inner">
 						<h3>Contact Form</h3>
-						<form>
+                        <p><?php echo (isset($message)) ? $message : false; ?> </p>
+						<form action="#" method="post">
 							<div class="form-group">
-								<input type="text" class="form-control" id="Name" placeholder="Name">
-							</div>
-							<div class="form-group">
-								<input type="email" class="form-control" id="email" placeholder="Email">
+								<input type="text" class="form-control" name="name" placeholder="Name">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="email" placeholder="Phone Number">
+								<input type="email" class="form-control" name="email" placeholder="Email">
 							</div>
 							<div class="form-group">
-								<textarea class="form-control" id="email" placeholder="Message" rows="5"></textarea>
+								<input type="text" class="form-control" name="phone" placeholder="Phone Number">
 							</div>
-							<div class="form-btn text-center">
-								<a href="#" class="btn btn-info">Submit</a>
+							<div class="form-group">
+								<textarea class="form-control" name="message" placeholder="Message" rows="5"></textarea>
 							</div>
+                            <div class="form-btn text-center">
+                                <button type="submit" name="submit" class="btn btn-info">Submit</button>
+                    		</div>
 						</form>
 					</div>
 				</div>

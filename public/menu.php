@@ -33,7 +33,7 @@
     			</div>
     			<div class="col-lg-3 col-md-2 form-cols">
     				<div class="form-group" id="default-selects">
-    					<select class="form-control">
+    					<select class="form-control" name="diet">
         					<option value="1">Price Down</option>
         					<option value="2">Price Up</option>
         					<option value="3">Vegan</option>
@@ -44,7 +44,7 @@
     			<!-- oces ovako da moze da bira samo 1 sastojak ili vise ? -->
     			<div class="col-lg-3 col-md-2 form-cols">
     				<div class="form-group" id="default-selects2">
-    					<select class="form-control">
+    					<select class="form-control" name="things">
     						<option value="1">All</option>
     						<option value="2">Egg</option>
     						<option value="3">Tomato</option>
@@ -61,7 +61,7 @@
     		</div>
     	</form>
     </section>
-    
+
 	<section class="menu">
 		<div class="container">
 			<div class="row">
@@ -70,7 +70,7 @@
 					<div class="menu-listing-1">
 						<div class="col-md-5 menu-image">
 							<div class="menu-inner-image">
-								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
+								<a href="#"><img src="images/thumb2.jpg" alt="menu image" class="img-responsive"></a>
 							</div>
 						</div>
 						<div class="col-md-7 menu-content">

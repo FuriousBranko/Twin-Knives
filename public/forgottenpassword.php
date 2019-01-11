@@ -25,7 +25,7 @@
         			<input type="email" name="email" class="form-control" id="email" placeholder="Email">
         		</div>
         		<div class="form-btn text-center">
-                <button type="submit" name="reset" class="btn btn-info" id="reset">Reset</button>
+                    <button type="submit" name="reset" class="btn btn-info" id="reset">Reset</button>
         		</div>
         	</form>
         </div>

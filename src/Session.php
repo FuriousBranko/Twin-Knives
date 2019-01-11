@@ -4,7 +4,6 @@ require_once dirname(__DIR__) . '/config/configuration.php';
 
 class Session
 {
-
     public static function new(string $name, $value)
     {
         return $_SESSION[$name] = $value;
@@ -14,5 +13,4 @@ class Session
     {
         return (isset($_SESSION[$name])) ? true : false;
     }
-
 }

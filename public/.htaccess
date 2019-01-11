@@ -1,14 +1,5 @@
-RewriteEngine On
-RewriteRule ^index?$ index.php
-RewriteRule ^about-us?$ about-us.php
-RewriteRule ^contact-us?$ contact-us.php
-RewriteRule ^menu?$ menu.php
-RewriteRule ^reservation?$ reservation.php
-RewriteRule ^registratoin?$ registratoin.php
-RewriteRule ^login?$ login.php
-RewriteRule ^logout?$ logout.php
-RewriteRule ^forgottenpassword?$ forgottenpassword.php
-RewriteRule ^order?$ order.php
-RewriteRule ^404?$ 404.php
-
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
 RewriteRule ^food/([0-9]+)/([0-9a-zA-Z]+) detail-page.php?id=$1&name=$2

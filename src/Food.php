@@ -4,7 +4,6 @@ require_once dirname(__DIR__) . '/config/configuration.php';
 
 class Food
 {
-
     public static function fetch(int $id)
     {
         $sql = "SELECT * FROM food WHERE id = $id;";
@@ -15,7 +14,8 @@ class Food
                 $row['information'] = json_decode($row['information']);
                 return $row;
             }
+        } else {
+            return false;
         }
     }
-
 }

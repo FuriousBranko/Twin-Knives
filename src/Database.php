@@ -4,7 +4,6 @@ require_once dirname(__DIR__) . '/config/configuration.php';
 
 class Database
 {
-
     private static $_instance;
     private $_connection;
 

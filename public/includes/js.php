@@ -11,25 +11,19 @@
 <script>
 
     $(document).ready(function(){
-        var url = $(location).attr('href'),
-            parts = url.split("/");
+        var url = $(location).attr('href');
 
-        if(jQuery.inArray("index", parts) != -1) {
+        if(url == "http://localhost/twin-knives/public/") {
             $("#index").addClass('active');
-        }
-        if(jQuery.inArray("menu", parts) != -1) {
+        } else if (url == "http://localhost/twin-knives/public/menu") {
             $("#menu").addClass('active');
-        }
-        if(jQuery.inArray("contact-us", parts) != -1) {
+        } else if(url == "http://localhost/twin-knives/public/contact-us") {
             $("#contactUs").addClass('active');
-        }
-        if(jQuery.inArray("reservation", parts) != -1) {
+        } else if(url == "http://localhost/twin-knives/public/reservation") {
             $("#reservation").addClass('active');
-        }
-        if(jQuery.inArray("login", parts) != -1) {
+        } else if(url == "http://localhost/twin-knives/public/login") {
             $("#login").addClass('active');
         }
-
   });
 
 </script>

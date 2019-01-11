@@ -7,7 +7,11 @@
     $keywords = "Something, very, interesting, about, this, hackaton";
     $description = "Something very interesting";
     require_once 'includes/headData.php';
+
     $food = Food::fetch($_GET['id']);
+    if(!$food) {
+        header("Location: http://localhost/twin-knives/public/404");
+    }
 ?>
 
 <body>

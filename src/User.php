@@ -4,7 +4,6 @@ require_once dirname(__DIR__) . '/config/configuration.php';
 
 class User
 {
-
     public static function login(string $email, string $password)
     {
         $errors = [];
@@ -29,7 +28,6 @@ class User
 
     public static function register(array $data)
     {
-
         $error = 0;
 
         foreach($data as $key => $value) {
@@ -55,13 +53,14 @@ class User
             } else {
                 echo "Error: " . $sql . "<br>" . Database::getInstance()->getConnection()->error;
             }
+        } else {
+            // if have errors
         }
     }
 
     // return true/false
     public static function forgottenPassword(string $email)
     {
-
         $error = 0;
 
         if(!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
@@ -81,7 +80,5 @@ class User
         } else {
             // check email
         }
-
     }
-
 }
