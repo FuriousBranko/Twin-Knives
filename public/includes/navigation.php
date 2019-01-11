@@ -15,6 +15,7 @@
                             <a class="nav-link" href="profile" id="navbarDropdownProfileLink" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Profile <i class="fa fa-chevron-down"></i></a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownProfileLink">
                                 <a class="dropdown-item" href="profil">Profil</a>
+                                <a class="dropdown-item" href="admin">Admin Panel</a>
                                 <a class="dropdown-item" href="order">Orders</a>
                                 <a class="dropdown-item" href="logout">Logout</a>
                             </div>

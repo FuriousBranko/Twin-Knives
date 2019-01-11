@@ -39,14 +39,37 @@
     					</select>
 
     				</div>
+				</div>
+    			<div class="col-md-2 form-cols">
+    				<div class="form-group" id="default-selects">
+    					<select class="form-control" name="price">
+                <option value="1">Vegan</option>
+                <option value="2">Keto</option>
+    					</select>
+
+    				</div>
     			</div>
     			<!-- oces ovako da moze da bira samo 1 sastojak ili vise ? -->
     			<div class="col-md-2 form-cols">
+					
     				<div class="form-group" id="default-selects2">
               <input type="checkbox" name="diet" value="Egg"> Egg
               <input type="checkbox" name="diet" value="Tomato"> Tomato
               <input type="checkbox" name="diet" value="Beef"> Beef
-              <input type="checkbox" name="diet" value="Chicken"> Chicken
+			  <input type="checkbox" name="diet" value="Chicken"> Chicken
+<!--
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></button>
+<ul class="dropdown-menu">
+  <li><input type="checkbox"/>&nbsp;Option 1</a></li>
+  <li><input type="checkbox"/>&nbsp;Option 2</a></li>
+  <li><input type="checkbox"/>&nbsp;Option 3</a></li>
+  <li><input type="checkbox"/>&nbsp;Option 4</a></li>
+  <li><input type="checkbox"/>&nbsp;Option 5</a></li>
+  <li><input type="checkbox"/>&nbsp;Option 6</a></li>
+</ul>
+-->
+
+<!-- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; -->
     				</div>
     			</div>
     			<div class="col-lg-2 col-md-2 form-cols">

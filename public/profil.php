@@ -36,7 +36,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section class="col-md-2">
     <p>Full name:</p>
     <p>Adress:</p>
     <p>Email:</p>
