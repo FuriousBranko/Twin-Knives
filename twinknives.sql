@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2019 at 10:24 PM
+-- Generation Time: Jan 11, 2019 at 04:03 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -31,8 +31,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `comment` (
   `idComment` int(11) NOT NULL,
   `id` int(11) NOT NULL,
+  `comment` text NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `rate` tinyint(4) NOT NULL
+  `rate` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -65,13 +66,14 @@ INSERT INTO `food` (`id`, `name`, `price`, `information`, `diet`, `image`) VALUE
 
 CREATE TABLE `order` (
   `idOrder` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
-  `amount` text NOT NULL,
+  `price` double NOT NULL,
+  `amount` int(11) NOT NULL,
   `code` varchar(6) NOT NULL,
-  `id` int(11) NOT NULL,
+  `idUserFK` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `address` varchar(50) NOT NULL,
-  `status` tinyint(1) NOT NULL
+  `status` tinyint(1) NOT NULL,
+  `idFoodFK` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -98,7 +100,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `address`, `phoneNumber`, `password`, `email`, `created`, `activated`) VALUES
 (1, 'Radivoje', 'Pupovac', 'Partizanskih Baza 66', '0659345363', '$2y$10$eMm8XelNc2Xb9OHSI/zjHuHU5Q155oZipeY3bdp6ncfJuh5HTcl/C', 'radivoje.pupovac98@gmail.com', '2019-01-07 19:09:42', 0),
-(6, 'asdasd', 'asdasd', 'asdasdasd', '12312313232', '$2y$10$KUH5LycroklWtO.RjjpKRe..R2bFux8i2Zf13YdAnl1joru/ayCv2', '12117204@vts.su.ac.rs', '2019-01-07 19:38:07', 0);
+(6, 'asdasd', 'asdasd', 'asdasdasd', '12312313232', '$2y$10$KUH5LycroklWtO.RjjpKRe..R2bFux8i2Zf13YdAnl1joru/ayCv2', '12117204@vts.su.ac.rs', '2019-01-07 19:38:07', 0),
+(7, 'Branko', 'Sabo', 'Ulcinjska 16', '123456789', '$2y$10$moe0YiAUgrerqWPYRxjTwe/o2ykaZBo3Wa1lSsDCsIUbAMOVvIsVK', 'kkk@kk.k', '2019-01-11 08:49:01', 0);
 
 --
 -- Indexes for dumped tables
@@ -123,8 +126,11 @@ ALTER TABLE `food`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`idOrder`),
-  ADD KEY `id` (`id`),
-  ADD KEY `address` (`address`);
+  ADD KEY `id` (`idUserFK`),
+  ADD KEY `address` (`address`),
+  ADD KEY `price` (`price`),
+  ADD KEY `price_2` (`price`),
+  ADD KEY `idFoodFK` (`idFoodFK`);
 
 --
 -- Indexes for table `users`
@@ -155,13 +161,30 @@ ALTER TABLE `food`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `idOrder` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idOrder` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `comment`
+--
+ALTER TABLE `comment`
+  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `order`
+--
+ALTER TABLE `order`
+  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`idFoodFK`) REFERENCES `food` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `order_ibfk_2` FOREIGN KEY (`idUserFK`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
