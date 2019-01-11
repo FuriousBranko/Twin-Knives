@@ -48,9 +48,20 @@
                                 required>
                         </div>
                         <!-- za ovog sledeceg neznam sta ti je bolje textbox ili samo text ako me kontas -->
-                        <div class="form-group">
-                            <input type="text" name="menuInfo" class="form-control" id="menuInfo" placeholder="Menu Info"
+                        <div class="row">
+                        <div class="form-group col-md-6">
+                            <input type="text" name="menuIngridient" class="form-control" id="menuIngridient" placeholder="Ingridient"
                                 required>
+                        </div>  
+                        <div class="form-group col-md-6">      
+                            <input type="text" name="menuAmount" class="form-control" id="menuAmount" placeholder="Amount"
+                                required>
+                        </div>    
+                        </div>
+                        <div class="form-group">
+                            <div class="form-btn plus text-center">
+                                <button type="button" class="btn btn-info" name="addMenu"><i class="fa fa-plus-circle"></i></button>
+                            </div>
                         </div>
                         <div class="form-group">
                             <input type="text" name="menuDiet" class="form-control" id="menuDiet" placeholder="Menu Diet Type"

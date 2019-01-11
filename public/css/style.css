@@ -746,6 +746,11 @@ button:focus {
     padding-bottom: 4px;
 }
 
+.plus{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 span.input-group-append {
     background-color: #f1f1f1;
 }
