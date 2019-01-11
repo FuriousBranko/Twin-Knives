@@ -28,7 +28,7 @@
 		</div>
 	</section>
     <div id="container">
-            <div class="reservation-form-inner col-md-6 offset-md-3">
+            <div class="reservation-form-inner col-md-4 offset-md-4">
             	<h3>Login</h3>
             	<form action="#" method="post">
             		<div class="form-group">

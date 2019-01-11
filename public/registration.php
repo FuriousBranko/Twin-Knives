@@ -15,8 +15,21 @@
 ?>
 
 <body>
+	    <?php require_once 'includes/navigation.php'; ?>
+	<section id="top-banner" style="background-image:url('images/slider.jpg'); width: 100%; background-repeat: no-repeat; background-size: cover; background-position: left;">
+		<div class="top-banner-overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 mx-auto top-banner-caption">
+						<h1>Register</h1>
+						<p>To be able to order online you need to register.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
     <div class="row">
-        <div class="reservation-form-inner col-md-6 offset-md-3">
+        <div class="reservation-form-inner col-md-4 offset-md-4">
         	<h3>Register</h3>
         	<form action="#" method="post">
         		<div class="form-group">
