@@ -27,9 +27,99 @@
     <p>Adress:</p>
     <p>Email:</p>
     <p>Phone Number:</p>
-    <a href="#">Change Password</a><br>
-    <a href="#">Change Info</a>
-    <!-- samo za password -->
+<div class="form-btn">
+    <button type="button" class="btn btn-info form-btn" data-toggle="modal" data-target="#myModal">Change password</button>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog col-md-2">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Change</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Old Password"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="New Password"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="rePassword" class="form-control" id="rePassword" placeholder="Confirm Password"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-btn text-center">
+                            <button type="submit" class="btn btn-info" name="register">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="form-btn">
+    <button type="button" class="btn btn-info form-btn" data-toggle="modal" data-target="#myModal1">Change info</button>
+</div>
+<!-- Modal -->
+<div id="myModal1" class="modal fade" role="dialog">
+    <div class="modal-dialog col-md-2">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Change info</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="address" class="form-control" id="address" placeholder="Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone">
+                    </div>
+                    <!-- Ako oces da stavimo da mora da se unese password da moze da potvrdi?
+        <div class="form-group">
+            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+        Pa onda preko IF da isbaci save -->
+                    <div class="form-group">
+                        <div class="form-btn text-center">
+                            <button type="submit" class="btn btn-info" name="register">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+    <!-- samo za password 
     <form action="#" method="post">
         <div class="col-md-2">
         <div class="form-group">
@@ -48,7 +138,7 @@
             </div>
             </div>
     </form>
-    <!-- samo za info -->
+    samo za info 
     <form action="#" method="post">
         <div class="form-group">
             <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
@@ -65,16 +155,17 @@
         <div class="form-group">
             <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone">
         </div>
-        <!-- Ako oces da stavimo da mora da se unese password da moze da potvrdi?
+         Ako oces da stavimo da mora da se unese password da moze da potvrdi?
         <div class="form-group">
             <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
         </div>
-        Pa onda preko IF da isbaci save -->
+        Pa onda preko IF da isbaci save 
         <div class="form-group">
             <div class="form-btn text-center">
                 <button type="submit" class="btn btn-info" name="register">Save</button>
             </div>
     </form>
+-->
 </body>
 <?php require_once 'includes/js.php'; ?>
 
