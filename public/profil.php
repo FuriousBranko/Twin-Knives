@@ -11,6 +11,18 @@
 ?>
 
 <body>
+        <?php require_once 'includes/navigation.php'; ?>
+	<section id="top-banner" style="background-image:url('images/slider.jpg'); width: 100%; background-repeat: no-repeat; background-size: cover; background-position: left;">
+		<div class="top-banner-overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 mx-auto top-banner-caption">
+						<h1>Profile</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
     <p>Full name:</p>
     <p>Adress:</p>
     <p>Email:</p>
@@ -19,6 +31,7 @@
     <a href="#">Change Info</a>
     <!-- samo za password -->
     <form action="#" method="post">
+        <div class="col-md-2">
         <div class="form-group">
             <input type="password" name="password" class="form-control" id="password" placeholder="Old Password"
                 required>
@@ -32,6 +45,7 @@
                 required>
             <div class="form-btn text-center">
                 <button type="submit" class="btn btn-info" name="register">Save</button>
+            </div>
             </div>
     </form>
     <!-- samo za info -->

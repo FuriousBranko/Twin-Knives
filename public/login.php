@@ -20,8 +20,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 mx-auto top-banner-caption">
-						<h1>Menu</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+						<h1>Login</h1>
+						<p>To be able to order online you need to login!</p>
 					</div>
 				</div>
 			</div>
