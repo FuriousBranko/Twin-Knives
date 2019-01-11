@@ -158,6 +158,41 @@
 
         </div>
     </div>
+    <!-- Delete Menu -->
+    <div class="form-btn">
+        <button type="button" class="btn btn-info form-btn" data-toggle="modal" data-target="#menuDelete">Delete menu</button>
+    </div>
+    <!-- Modal -->
+    <div id="menuDelete" class="modal fade" role="dialog">
+        <div class="modal-dialog col-md-2">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete Menu</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <input type="number" name="menuDelete" class="form-control" id="menuDelete" placeholder="MenuID"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-btn text-center plus">
+                                <button type="submit" class="btn btn-info" name="deleteMenu">Delete</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <!-- Orders -->
     <div class="form-btn">
         <button type="button" class="btn btn-info form-btn" data-toggle="modal" data-target="#seeOrders">See Orders</button>
