@@ -48,7 +48,7 @@
 </body>
 <?php
     else:
-        header("Location: index");
+        Redirect::to("index");
     endif;
 ?>
 </html>

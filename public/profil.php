@@ -8,6 +8,20 @@
 	$description = "Something very interesting";
 	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
+    if(Session::exist('user')) {
+      $id = Session::get('user');
+    } else {
+      Redirect::to("index");
+    }
+    if(isset($_POST['change'])) {
+      $data = [
+        'oldPassword' => $_POST['oldPassword'],
+        'newPassword' => $_POST['newPassword'],
+        'rePassword' => $_POST['rePassword'],
+        'id' => $id
+      ];
+      User::resetPassword($data);
+    }
 ?>
 
 <body>
@@ -43,11 +57,11 @@
             <div class="modal-body">
                 <form action="#" method="post">
                     <div class="form-group">
-                        <input type="password" name="password" class="form-control" id="password" placeholder="Old Password"
+                        <input type="password" name="oldPassword" class="form-control" id="password" placeholder="Old Password"
                             required>
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" class="form-control" id="password" placeholder="New Password"
+                        <input type="password" name="newPassword" class="form-control" id="password" placeholder="New Password"
                             required>
                     </div>
                     <div class="form-group">
@@ -56,7 +70,7 @@
                     </div>
                     <div class="form-group">
                         <div class="form-btn text-center">
-                            <button type="submit" class="btn btn-info" name="register">Save</button>
+                            <button type="submit" class="btn btn-info" name="change">Save</button>
                         </div>
                     </div>
                 </form>
@@ -118,8 +132,8 @@
 
     </div>
 </div>
-    
-    <!-- samo za password 
+
+    <!-- samo za password
     <form action="#" method="post">
         <div class="col-md-2">
         <div class="form-group">
@@ -138,7 +152,7 @@
             </div>
             </div>
     </form>
-    samo za info 
+    samo za info
     <form action="#" method="post">
         <div class="form-group">
             <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
@@ -159,7 +173,7 @@
         <div class="form-group">
             <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
         </div>
-        Pa onda preko IF da isbaci save 
+        Pa onda preko IF da isbaci save
         <div class="form-group">
             <div class="form-btn text-center">
                 <button type="submit" class="btn btn-info" name="register">Save</button>

@@ -11,7 +11,19 @@
 ?>
 
 <body>
-    <?php require_once 'includes/navigation.php'; ?>
+      <?php require_once 'includes/navigation.php'; ?>
+    <section id="top-banner" style="background-image:url('images/slider.jpg'); width: 100%; background-repeat: no-repeat; background-size: cover; background-position: left;">
+      <div class="top-banner-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 mx-auto top-banner-caption">
+              <h1>Order</h1>
+              <p>Something smart in this paragraph</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="container">
         <div id="" class="">
             <br>
@@ -19,19 +31,19 @@
                 <thead>
                     <tr>
                         <th id="" class="">
-                            Image 
+                            Image
                         </th>
                         <th id="" class="">
-                            Name 
+                            Name
                         </th>
                         <th id="" class="">
-                            Unit price 
+                            Unit price
                         </th>
                         <th id="" class="">
-                            Quantity 
+                            Quantity
                         </th>
                         <th id="" class="">
-                            Total price 
+                            Total price
                         </th>
                     </tr>
                 </thead>
@@ -60,7 +72,7 @@
                     <tr>
                         <td colspan="3" class=""></td>
                         <td id="" class="">
-                            Total 
+                            Total
                         </td>
                         <td class="" data-title="Total">
                             <span class=""><!-- Sve ukupno--></span>

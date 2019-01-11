@@ -26,31 +26,27 @@
 	</section>
 
     <section class="container">
-    	<form action="#" class="serach-form-area">
+    	<form action="#" method="get" class="serach-form-area">
     		<div class="row justify-content-center">
-    			<div class="col-lg-4 form-cols">
+    			<div class="col-md-3 form-cols">
     				<input type="text" class="form-control" name="search" placeholder="what are you looging for?">
     			</div>
-    			<div class="col-lg-3 col-md-2 form-cols">
+    			<div class="col-md-2 form-cols">
     				<div class="form-group" id="default-selects">
-    					<select class="form-control" name="diet">
-        					<option value="1">Price Down</option>
-        					<option value="2">Price Up</option>
-        					<option value="3">Vegan</option>
-        					<option value="4">Keto</option>
+    					<select class="form-control" name="price">
+                <option value="1">Price Down</option>
+                <option value="2">Price Up</option>
     					</select>
+
     				</div>
     			</div>
     			<!-- oces ovako da moze da bira samo 1 sastojak ili vise ? -->
-    			<div class="col-lg-3 col-md-2 form-cols">
+    			<div class="col-md-2 form-cols">
     				<div class="form-group" id="default-selects2">
-    					<select class="form-control" name="things">
-    						<option value="1">All</option>
-    						<option value="2">Egg</option>
-    						<option value="3">Tomato</option>
-    						<option value="4">Beef</option>
-    						<option value="5">Chicken</option>
-    					</select>
+              <input type="checkbox" name="diet" value="Egg"> Egg
+              <input type="checkbox" name="diet" value="Tomato"> Tomato
+              <input type="checkbox" name="diet" value="Beef"> Beef
+              <input type="checkbox" name="diet" value="Chicken"> Chicken
     				</div>
     			</div>
     			<div class="col-lg-2 col-md-2 form-cols">

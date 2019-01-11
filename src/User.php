@@ -81,4 +81,41 @@ class User
             // check email
         }
     }
+
+    // oldPassword, newPassword, rePassword, id
+    public static function resetPassword(array $data)
+    {
+      $required = ['oldPassword', 'newPassword', 'rePassword', 'id'];
+      $missingKeys = array_diff_key(array_flip($required), $data);
+
+      if(empty($missingKeys)) {
+        foreach($data as $key => $value) {
+          $$key = $value;
+        }
+      } else {
+        return false; // someone change names in form
+      }
+
+      if($newPassword === $rePassword) {
+        $sql = "SELECT * FROM users WHERE id = '$id';";
+        $connection = Database::getInstance()->getConnection();
+        $result = $connection->query($sql);
+        // if user exist with that id
+        if($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+            if(Password::verify($oldPassword, $row['password'])) { // if is old password okay
+              $newPassword = Password::new($newPassword);
+              $sql = "UPDATE users SET password = '$newPassword' WHERE id = '$id';"; // update new password
+              if($result = $connection->query($sql)) {
+                return true;
+              } else {
+                return false; // problem with query for update
+              }
+            } return false; // wrong old password
+          }
+        } // no user with that id
+      }
+
+    }
+
 }

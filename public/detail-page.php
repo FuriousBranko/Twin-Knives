@@ -10,7 +10,7 @@
 
     $food = Food::fetch($_GET['id']);
     if(!$food) {
-        header("Location: http://localhost/twin-knives/public/404");
+        Redirect::to("404");
     }
 ?>
 

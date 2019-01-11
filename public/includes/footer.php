@@ -29,7 +29,6 @@
                         <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="menu.html">Menu</a></li>
                         <li><a href="reservation.html">Reservation</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>

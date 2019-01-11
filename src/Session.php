@@ -13,4 +13,9 @@ class Session
     {
         return (isset($_SESSION[$name])) ? true : false;
     }
+
+    public static function get(string $name)
+    {
+      return (isset($_SESSION[$name])) ? $_SESSION[$name] : false;
+    }
 }
