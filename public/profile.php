@@ -10,6 +10,8 @@
     require_once 'includes/headData.php';
     if(Session::exist('user')) {
       $id = Session::get('user');
+      $user = User::data(1,['firstName','lastName','phoneNumber','email','address']);
+      $user['fullName'] = $user['firstName'] . " " . $user['lastName'];
     } else {
       Redirect::to("index");
     }
@@ -22,10 +24,14 @@
       ];
       User::resetPassword($data);
     }
+
+    if(isset($_POST['edit'])) {
+      User::edit($id, $_POST);
+    }
 ?>
 
 <body>
-        <?php require_once 'includes/navigation.php'; ?>
+<?php require_once 'includes/navigation.php'; ?>
 	<section id="top-banner" style="background-image:url('images/slider.jpg'); width: 100%; background-repeat: no-repeat; background-size: cover; background-position: left;">
 		<div class="top-banner-overlay">
 			<div class="container">
@@ -36,11 +42,11 @@
 				</div>
 			</div>
 		</div>
-	</section class="col-md-2">
-    <p>Full name:</p>
-    <p>Adress:</p>
-    <p>Email:</p>
-    <p>Phone Number:</p>
+	</section>
+    <p>Full name: <?php echo $user['fullName']; ?></p>
+    <p>Adress: <?php echo $user['address']; ?></p>
+    <p>Email: <?php echo $user['email']; ?></p>
+    <p>Phone Number: <?php echo $user['phoneNumber']; ?></p>
 <div class="form-btn">
     <button type="button" class="btn btn-info form-btn" data-toggle="modal" data-target="#myModal">Change password</button>
 </div>
@@ -99,28 +105,26 @@
             <div class="modal-body">
                 <form action="#" method="post">
                     <div class="form-group">
-                        <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
+                        <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name" value="<?php echo $user['firstName']; ?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name">
+                        <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name" value="<?php echo $user['lastName']; ?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="address" class="form-control" id="address" placeholder="Address">
+                        <input type="text" name="address" class="form-control" id="address" placeholder="Address" value="<?php echo $user['address']; ?>">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="<?php echo $user['email']; ?>">
                     </div>
                     <div class="form-group">
-                        <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone">
+                        <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone" value="<?php echo $user['phoneNumber']; ?>">
                     </div>
-                    <!-- Ako oces da stavimo da mora da se unese password da moze da potvrdi?
-        <div class="form-group">
-            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-        </div>
-        Pa onda preko IF da isbaci save -->
+                    <!-- <div class="form-group">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                    </div> -->
                     <div class="form-group">
                         <div class="form-btn text-center">
-                            <button type="submit" class="btn btn-info" name="register">Save</button>
+                            <button type="submit" class="btn btn-info" name="edit">Save</button>
                         </div>
                     </div>
                 </form>
@@ -132,54 +136,6 @@
 
     </div>
 </div>
-
-    <!-- samo za password
-    <form action="#" method="post">
-        <div class="col-md-2">
-        <div class="form-group">
-            <input type="password" name="password" class="form-control" id="password" placeholder="Old Password"
-                required>
-        </div>
-        <div class="form-group">
-            <input type="password" name="password" class="form-control" id="password" placeholder="New Password"
-                required>
-        </div>
-        <div class="form-group">
-            <input type="password" name="rePassword" class="form-control" id="rePassword" placeholder="Confirm Password"
-                required>
-            <div class="form-btn text-center">
-                <button type="submit" class="btn btn-info" name="register">Save</button>
-            </div>
-            </div>
-    </form>
-    samo za info
-    <form action="#" method="post">
-        <div class="form-group">
-            <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
-        </div>
-        <div class="form-group">
-            <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name">
-        </div>
-        <div class="form-group">
-            <input type="text" name="address" class="form-control" id="address" placeholder="Address">
-        </div>
-        <div class="form-group">
-            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
-        </div>
-        <div class="form-group">
-            <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone">
-        </div>
-         Ako oces da stavimo da mora da se unese password da moze da potvrdi?
-        <div class="form-group">
-            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-        </div>
-        Pa onda preko IF da isbaci save
-        <div class="form-group">
-            <div class="form-btn text-center">
-                <button type="submit" class="btn btn-info" name="register">Save</button>
-            </div>
-    </form>
--->
 </body>
 <?php require_once 'includes/js.php'; ?>
 

@@ -19,7 +19,7 @@
 						<span class="wow fadeInUp">Welcome to</span>
 						<h2 class="fonthead wow fadeInUp">Twin Knives</h2>
 						<p class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-						<a href="menu.php" class="btn btn-info view-btn wow fadeInUp">VIEW MENU</a>
+						<a href="menu" class="btn btn-info view-btn wow fadeInUp">VIEW MENU</a>
 					</div>
 				</div>
 			</div>

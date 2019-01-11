@@ -115,7 +115,24 @@ class User
           }
         } // no user with that id
       }
-
     }
 
+    public static function data(int $id, array $what)
+    {
+      $params = "";
+      foreach($what as $value) {
+        $params .= $value.", ";
+      }
+      $params = rtrim($params, ', ');
+      $sql = "SELECT $params FROM users WHERE id = '$id';";
+      $connection = Database::getInstance()->getConnection();
+      $result = $connection->query($sql);
+      if($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          return $row;
+        }
+      } else {
+        return false;
+      }
+    }
 }
