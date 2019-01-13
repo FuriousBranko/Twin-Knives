@@ -8,26 +8,28 @@
 	$description = "Something very interesting";
 	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
+    // Provera dal je ulogovan, ako nije onda ga redirectuje na index
     if(Session::exist('user')) {
       $id = Session::get('user');
       $user = User::data(1,['firstName','lastName','phoneNumber','email','address']);
       $user['fullName'] = $user['firstName'] . " " . $user['lastName'];
+      if(isset($_POST['change'])) {
+        $data = [
+          'oldPassword' => $_POST['oldPassword'],
+          'newPassword' => $_POST['newPassword'],
+          'rePassword' => $_POST['rePassword'],
+          'id' => $id
+        ];
+        User::resetPassword($data);
+      }
+  
+      if(isset($_POST['edit'])) {
+        User::edit($id, $_POST);
+      }
     } else {
       Redirect::to("index");
     }
-    if(isset($_POST['change'])) {
-      $data = [
-        'oldPassword' => $_POST['oldPassword'],
-        'newPassword' => $_POST['newPassword'],
-        'rePassword' => $_POST['rePassword'],
-        'id' => $id
-      ];
-      User::resetPassword($data);
-    }
-
-    if(isset($_POST['edit'])) {
-      User::edit($id, $_POST);
-    }
+    
 ?>
 
 <body>

@@ -121,24 +121,8 @@
 					<div class="clients-bg">
 						<div class="loop owl-carousel owl-theme">
 							<?php
-                    //gets all the comments and the name if they are verified by the admin
-                    $sql = "SELECT  comment, rate FROM comment ORDER BY RAND() LIMIT 3;";
-                    $query = mysqli_query($connect,$sql);
-                    while($result = mysqli_fetch_assoc($query)){
-                        echo "
-                            <div class=\"item\">
-								<div class=\"row\">
-									<div class=\"col-md-8 text-center\">
-										<p>“ ".$result['comment']." ”</p>
-									</div>
-                            		<div class=\"author-content\">
-                                    	<h3> ".$result['rate']."</h3>
-									</div>
-                                </div>
-                            </div>
-                        ";
-                    }        
-                ?>
+							Comment::get();
+                			?>
 							
 						</div>
 					</div>
