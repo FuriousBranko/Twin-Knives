@@ -108,6 +108,50 @@
 		</div>
 	</section>
 
+	<section id="our-clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mx-auto text-center wow fadeInUp">
+                    <h2>Food <span>REVIEWS</span></h2>
+                </div>
+                <div class="col-md-12 wow fadeInUp">
+                    <div class="clients-bg">
+                        <div class="loop owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="row">
+                                    
+                                    <div class="col-md-8 text-center">
+                                        <p><i>"Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                                fames ac turpis egestas. In consectetur laoreet malesuada. Phasellus et
+                                                ipsum semper, faucibus ante id, aliquam nibh."</i></p>
+									</div>
+									<div class="col-md-4">
+                                        <img src="images/client.png" alt="client image" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    
+                                    <div class="col-md-8 text-center">
+                                        <p><i>"2"</i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-8 text-center">
+                                        <p><i>"3"</i></p>
+                                    </div>
+                                </div>
+							</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <?php require_once 'includes/footer.php' ?>
 	<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
