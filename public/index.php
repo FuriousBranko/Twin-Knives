@@ -11,18 +11,19 @@
 ?>
 
 <body>
-    <?php require_once 'includes/navigation.php'; ?>
+	<?php require_once 'includes/navigation.php'; ?>
 	<section id="head">
-			<div class="carousel-inner" role="listbox">
-				<div class="carousel-item active" style="background-image: url('images/banner.jpg')">
-					<div class="carousel-caption">
-						<span class="wow fadeInUp">Welcome to</span>
-						<h2 class="fonthead wow fadeInUp">Twin Knives</h2>
-						<p class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-						<a href="menu" class="btn btn-info view-btn wow fadeInUp">VIEW MENU</a>
-					</div>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active" style="background-image: url('images/banner.jpg')">
+				<div class="carousel-caption">
+					<span class="wow fadeInUp">Welcome to</span>
+					<h2 class="fonthead wow fadeInUp">Twin Knives</h2>
+					<p class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+						ut labore.</p>
+					<a href="menu" class="btn btn-info view-btn wow fadeInUp">VIEW MENU</a>
 				</div>
 			</div>
+		</div>
 	</section>
 
 	<section id="about">
@@ -32,8 +33,10 @@
 					<div class="about-caption">
 						<img src="images/slider.jpg" alt="about-bg-img" class="img-responsive">
 						<h3>We Make Delicious Foods Since 1952.</h3>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+							aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+							dolores eos qui ratione voluptatem sequi nesciunt.</p>
 					</div>
 				</div>
 			</div>
@@ -109,51 +112,44 @@
 	</section>
 
 	<section id="our-clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 mx-auto text-center wow fadeInUp">
-                    <h2>Food <span>REVIEWS</span></h2>
-                </div>
-                <div class="col-md-12 wow fadeInUp">
-                    <div class="clients-bg">
-                        <div class="loop owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="row">
-                                    
-                                    <div class="col-md-8 text-center">
-                                        <p><i>"Pellentesque habitant morbi tristique senectus et netus et malesuada
-                                                fames ac turpis egestas. In consectetur laoreet malesuada. Phasellus et
-                                                ipsum semper, faucibus ante id, aliquam nibh."</i></p>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 mx-auto text-center wow fadeInUp">
+					<h2>Food <span>REVIEWS</span></h2>
+				</div>
+				<div class="col-md-12 wow fadeInUp">
+					<div class="clients-bg">
+						<div class="loop owl-carousel owl-theme">
+							<?php
+                    //gets all the comments and the name if they are verified by the admin
+                    $sql = "SELECT  comment, rate FROM comment ORDER BY RAND() LIMIT 3;";
+                    $query = mysqli_query($connect,$sql);
+                    while($result = mysqli_fetch_assoc($query)){
+                        echo "
+                            <div class=\"item\">
+								<div class=\"row\">
+									<div class=\"col-md-8 text-center\">
+										<p>“ ".$result['comment']." ”</p>
 									</div>
-									<div class="col-md-4">
-                                        <img src="images/client.png" alt="client image" class="img-responsive">
-                                    </div>
+                            		<div class=\"author-content\">
+                                    	<h3> ".$result['rate']."</h3>
+									</div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="row">
-                                    
-                                    <div class="col-md-8 text-center">
-                                        <p><i>"2"</i></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-md-8 text-center">
-                                        <p><i>"3"</i></p>
-                                    </div>
-                                </div>
-							</div>
-							</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <?php require_once 'includes/footer.php' ?>
+                        ";
+                    }        
+                ?>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<?php require_once 'includes/footer.php' ?>
 	<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 <?php require_once 'includes/js.php'; ?>
+
 </html>
