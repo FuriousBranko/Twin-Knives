@@ -149,7 +149,7 @@
                                     <!-- Cena po kom --></span> </span>
                         </td>
                         <td data-title="Quantity" class="">
-                            <input id="" type="number" name="" class="" value="2" min="0">
+                            <input id="" type="number" name="" class="" value="1" min="0">
                         </td>
                         <td data-title="Total price" class="">
                             <span class=""><span class="">
