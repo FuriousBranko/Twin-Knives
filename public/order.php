@@ -39,7 +39,7 @@
 }
 </style>
 <body>
-    <?php// require_once 'includes/navigation.php'; ?>
+    <?php require_once 'includes/navigation.php'; ?>
     <section id="top-banner" style="background-image:url('images/slider.jpg'); width: 100%; background-repeat: no-repeat; background-size: cover; background-position: left;">
         <div class="top-banner-overlay">
             <div class="container">

@@ -63,7 +63,7 @@ class Food
 
     public static function fetchSpecial()
     {
-        $sql = "SELECT * FROM food";
+        $sql = "SELECT * FROM food LIMIT 5";
         $connection = Database::getInstance()->getConnection();
         $result = $connection->query($sql);
         $htmlResponse = "";
@@ -75,7 +75,7 @@ class Food
                 <div class="item wow">
                     <div class="col-md-12 col-sm-12">
                         <div class="hovereffect">
-                            <a href="<?php echo 'food/'.$row['id'].'/'.$row['name']; ?>"><img src="<?php echo $row['image']?>" alt="special menu item"></a>
+                            <a href="<?php echo 'food/'.$row['id'].'/'.$row['name']; ?>"><img src="<?php echo "images/".$row['image']?>" alt="special menu item"></a>
                             <div class="overlay">
                                 <h4><?php echo $row['name']; ?></h4>
                                 <p><?php echo "Diet: " . $row['diet']; ?></p>

@@ -9,18 +9,37 @@ class Comment
         $sql = "SELECT comment, rate FROM comment ORDER BY RAND() LIMIT 3;";
         $connection = Database::getInstance()->getConnection();
         $result = $connection->query($sql);
+        $rating = 0;
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
+                switch ($row['rate']) {
+                    case 1:
+                        $rating= "<img src=\"images/rate1.png\" alt=\"client image\" class=\"img-responsive\">";
+                        break;
+                    case 2:
+                        $rating= "<img src=\"images/rate2.png\" alt=\"client image\" class=\"img-responsive\">";
+                        break;
+                    case 3:
+                        $rating= "<img src=\"images/rate3.png\" alt=\"client image\" class=\"img-responsive\">";
+                        break;
+                    case 4:
+                        $rating= "<img src=\"images/rate4.png\" alt=\"client image\" class=\"img-responsive\">";
+                        break;
+                    case 5:
+                        $rating= "<img src=\"images/rate5.png\" alt=\"client image\" class=\"img-responsive\">";
+                        break;
+                }
                echo "<div class=\"item\">
-								<div class=\"row\">
+                                <div class=\"row\">
+                                   <div class=\"col-md-4 client-image\">
+                                        ".$rating."
+                                   </div>
 									<div class=\"col-md-8 text-center\">
-										<p>“ ".$row['comment']." ”</p>
-									</div>
-                            		<div class=\"author-content\">
-                                    	<h3> ".$row['rate']."</h3>
+										<p>“<i> ".$row['comment']." </i>”</p>
+									
 									</div>
                                 </div>
-                            </div>";
+                     </div>";
             }
         } else {
             return false;
