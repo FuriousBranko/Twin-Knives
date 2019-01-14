@@ -29,8 +29,20 @@ public static function get()
 
 public static function push(array $data)
 {
-    $sql = "INSERT INTO comment, rate FROM comment ORDER BY RAND() LIMIT 3;";
+    $sql = "SELECT code FROM order;";
     $connection = Database::getInstance()->getConnection();
     $result = $connection->query($sql);
+    if($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            $code[] = $row['code'];
+        }
+        }
+    foreach($data as $key => $value) {
+        $$key = $value;
+    }
+    if(in_array($orderCode, $codeFK)){
+    $sql = "INSERT INTO comment(codeFK, comment, rate)";
+    $sql.= "VALUES('$codeFK', '$comment', '$rate');";
+    }
 }
 }
