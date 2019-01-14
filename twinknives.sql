@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2019 at 04:03 PM
+-- Generation Time: Jan 14, 2019 at 01:17 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -30,11 +30,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `comment` (
   `idComment` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
+  `codeFK` varchar(6) NOT NULL,
   `comment` text NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `rate` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`idComment`, `codeFK`, `comment`, `time`, `rate`) VALUES
+(1, '555555', 'adsss', '2019-01-13 16:49:42', 5),
+(2, '333333', 'adasdffff', '2019-01-14 10:04:23', 3),
+(3, '444444', 'qqqqq', '2019-01-14 10:05:41', 2),
+(4, '222222', 'qwerrrrrr', '2019-01-14 10:05:57', 4);
 
 -- --------------------------------------------------------
 
@@ -76,6 +86,17 @@ CREATE TABLE `order` (
   `idFoodFK` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `order`
+--
+
+INSERT INTO `order` (`idOrder`, `price`, `amount`, `code`, `idUserFK`, `date`, `address`, `status`, `idFoodFK`) VALUES
+(1, 50, 1, '555555', 1, '2019-01-13 16:49:05', 'address', 0, 1),
+(2, 20, 1, '444444', 7, '2019-01-14 10:00:06', '553355', 0, 1),
+(3, 83, 4, '333333', 7, '2019-01-14 10:00:38', '434636', 0, 1),
+(4, 44, 53, '222222', 8, '2019-01-14 10:01:10', '4378534', 0, 1),
+(5, 4, 3, '111111', 6, '2019-01-14 10:08:55', 'ad33', 0, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -101,7 +122,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `address`, `phoneNumber`, `password`, `email`, `created`, `activated`) VALUES
 (1, 'Radivoje', 'Pupovac', 'Partizanskih Baza 66', '0659345363', '$2y$10$eMm8XelNc2Xb9OHSI/zjHuHU5Q155oZipeY3bdp6ncfJuh5HTcl/C', 'radivoje.pupovac98@gmail.com', '2019-01-07 19:09:42', 0),
 (6, 'asdasd', 'asdasd', 'asdasdasd', '12312313232', '$2y$10$KUH5LycroklWtO.RjjpKRe..R2bFux8i2Zf13YdAnl1joru/ayCv2', '12117204@vts.su.ac.rs', '2019-01-07 19:38:07', 0),
-(7, 'Branko', 'Sabo', 'Ulcinjska 16', '123456789', '$2y$10$moe0YiAUgrerqWPYRxjTwe/o2ykaZBo3Wa1lSsDCsIUbAMOVvIsVK', 'kkk@kk.k', '2019-01-11 08:49:01', 0);
+(7, 'Branko', 'Sabo', 'Ulcinjska 16', '123456789', '$2y$10$moe0YiAUgrerqWPYRxjTwe/o2ykaZBo3Wa1lSsDCsIUbAMOVvIsVK', 'kkk@kk.k', '2019-01-11 08:49:01', 0),
+(8, 'Branko', 'Sabo', 'Ulcinjska 16', '06123456789', '$2y$10$ehv6syCjCkhMIAsk/4lKu.RxB8B7QejXyxF6DvD.Lpo1qU6/JhqtC', 'wolfplayer98@gmail.com', '2019-01-13 23:46:53', 0);
 
 --
 -- Indexes for dumped tables
@@ -112,7 +134,7 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `address`, `phoneNumber`, `p
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`idComment`),
-  ADD KEY `id` (`id`);
+  ADD KEY `codeFK` (`codeFK`);
 
 --
 -- Indexes for table `food`
@@ -130,7 +152,8 @@ ALTER TABLE `order`
   ADD KEY `address` (`address`),
   ADD KEY `price` (`price`),
   ADD KEY `price_2` (`price`),
-  ADD KEY `idFoodFK` (`idFoodFK`);
+  ADD KEY `idFoodFK` (`idFoodFK`),
+  ADD KEY `code` (`code`);
 
 --
 -- Indexes for table `users`
@@ -149,7 +172,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `idComment` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idComment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `food`
@@ -161,13 +184,13 @@ ALTER TABLE `food`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `idOrder` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idOrder` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
@@ -177,7 +200,7 @@ ALTER TABLE `users`
 -- Constraints for table `comment`
 --
 ALTER TABLE `comment`
-  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`codeFK`) REFERENCES `order` (`code`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `order`

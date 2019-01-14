@@ -35,14 +35,15 @@ public static function push(array $data)
     if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
             $code[] = $row['code'];
+            echo $row['code'];
         }
         }
     foreach($data as $key => $value) {
         $$key = $value;
     }
-    if(in_array($orderCode, $codeFK)){
+    if(in_array($codeFK, $code)){
     $sql = "INSERT INTO comment(codeFK, comment, rate)";
-    $sql.= "VALUES('$codeFK', '$comment', '$rate');";
+    $sql.= "VALUES('$codeFK', '$comment', '$rating');";
     }
 }
 }

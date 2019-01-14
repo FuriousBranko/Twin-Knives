@@ -38,6 +38,27 @@ h2 {
     font-family: satisfy, cursive;
 }
 
+.star-rating {
+    direction: rtl;
+}
+.star-rating input[type="radio"] {
+    display: none;
+}
+.star-rating > label {
+    color: #ccc;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    font-size: 50px;
+}
+.star-rating > label:hover,
+.star-rating > label:hover ~ label,
+.star-rating > input[type="radio"]:checked ~ label{
+    color: #f2b600;
+}
+
 a.btn.btn-info:hover {
     color: #fefefe !important;
     background-color: #e8002a !important;
