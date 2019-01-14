@@ -144,32 +144,16 @@
                             </div>
                         </td>
                         <td data-title="Name" class="">
-                            <p class=""><a class="" href="#">
-                                    <!-- Naziv Jela--></a> </p>
+                            <p class=""><a class="" href="#"><!-- Naziv Jela--></a> </p>
                         </td>
-                        <td data-title="Unit price" class="">
-                            <span class=""><span class="">
-                                    <!-- Cena po kom --></span> </span>
+                        <td data-title="Ammount" class="">
+                            <p></p>
                         </td>
-                        <td data-title="Quantity" class="">
-                            <input id="" type="number" name="" class="" value="1" min="0">
-                        </td>
-                        <td data-title="Total price" class="">
-                            <span class=""><span class="">
-                                    <!-- Ukupna Cena --></span> </span>
+                        <td data-title="Price" class="">
+                            <span class=""><span class=""><!-- Cena po kom --></span> </span>
                         </td>
                     </tr>
 
-                    <tr>
-                        <td colspan="3" class=""></td>
-                        <td id="" class="">
-                            Total
-                        </td>
-                        <td class="" data-title="Total">
-                            <span class="">
-                                <!-- Sve ukupno--></span>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>

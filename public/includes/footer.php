@@ -26,10 +26,9 @@
             <div class="row">
                 <div class="col-md-8 footer-menu">
                     <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="reservation.html">Reservation</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="index.php" class="active">Home</a></li>
+                        <li><a href="menu.php">Menu</a></li>
+                        <li><a href="contact-us.php">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 mx-auto text-center copyright">
