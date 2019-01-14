@@ -125,13 +125,10 @@
                             Name
                         </th>
                         <th id="" class="">
-                            Unit price
+                            Amount
                         </th>
                         <th id="" class="">
-                            Quantity
-                        </th>
-                        <th id="" class="">
-                            Total price
+                            Price
                         </th>
                     </tr>
                 </thead>
@@ -146,7 +143,7 @@
                         <td data-title="Name" class="">
                             <p class=""><a class="" href="#"><!-- Naziv Jela--></a> </p>
                         </td>
-                        <td data-title="Ammount" class="">
+                        <td data-title="Amount" class="">
                             <p></p>
                         </td>
                         <td data-title="Price" class="">
