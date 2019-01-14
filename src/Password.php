@@ -22,5 +22,4 @@ class Password
             return false;
         }
     }
-
 }

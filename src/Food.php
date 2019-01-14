@@ -35,8 +35,8 @@ class Food
                 $sql .= " ORDER BY price ASC;";
             }
         }
-        $connection = Database::getInstance()->getConnection();
-        $result = $connection->query($sql);
+        $conn = Database::getInstance()->getConnection();
+        $result = $conn->query($sql);
         $htmlResponse = "";
 
         if($result->num_rows > 0) {
@@ -64,8 +64,8 @@ class Food
     public static function fetchSpecial()
     {
         $sql = "SELECT * FROM food LIMIT 5";
-        $connection = Database::getInstance()->getConnection();
-        $result = $connection->query($sql);
+        $conn = Database::getInstance()->getConnection();
+        $result = $conn->query($sql);
         $htmlResponse = "";
 
         if($result->num_rows > 0) {
@@ -90,5 +90,32 @@ class Food
             }
         }
         return $htmlResponse;
+    }
+
+    public static function addMenu(array $data)
+    {   // array_combine($keys, $values) : array
+        $required = ['menuName', 'menuPrice', 'menuDiet', 'menuImg'];
+        $conn = Database::getInstance()->getConnection();
+        foreach($data as $key => $value) {
+            if(in_array($key, $required)) {
+                $$key = $conn->escape_string($value);
+            } else {
+                return false;
+            }
+        }
+        if(isset($data['ingridient']) && isset($data['amount'])) {
+            $information = json_encode(array_combine($data['ingridient'], $data['amount']));
+        } else {
+            return false;
+        }
+
+        $sql = "INSERT INTO food(name, price, information, diet, image) ";
+        $sql.= "VALUES('$menuName', '$menuPrice', '$information', '$menuDiet', '$menuImg');";
+
+        if($result = Database::getInstance()->getConnection()->query($sql)) {
+            return "Success!";
+        } else {
+            return "Error: " . $sql . "<br>" . Database::getInstance()->getConnection()->error;
+        }
     }
 }

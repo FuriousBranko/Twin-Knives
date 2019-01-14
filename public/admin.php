@@ -10,6 +10,7 @@
     if(Session::get('permission') != 1) {
         Redirect::to('index');
     }
+
 ?>
 
 <body>
@@ -19,6 +20,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 mx-auto top-banner-caption">
+                        <?php
+                            if(isset($_POST['addMenu'])) {
+                                echo Food::addMenu($_POST);
+                            }
+                        ?>
                         <h1>Admin Panel</h1>
                         <p>Add and remove menu items</p>
                         <p>See all orders</p>
@@ -56,11 +62,11 @@
                                 <!-- za ovog sledeceg neznam sta ti je bolje textbox ili samo text ako me kontas -->
                                 <div class="row" id="infoRow">
                                     <div class="form-group col-md-6">
-                                        <input type="text" name="menuIngridient" class="form-control" id="menuIngridient"
+                                        <input type="text" name="ingridient[]" class="form-control" id="menuIngridient"
                                             placeholder="Ingridient" required>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="text" name="menuAmount" class="form-control" id="menuAmount"
+                                        <input type="text" name="amount[]" class="form-control" id="menuAmount"
                                             placeholder="Amount" required>
                                     </div>
                                 </div>
@@ -76,7 +82,7 @@
                                 </div>
                                 <div class="form-group">
                                     <input type="file" name="menuImg" class="form-control" id="menuImg" placeholder="Menu Image"
-                                        required>
+                                        >
                                 </div>
                                 <div class="form-group">
                                     <div class="form-btn text-center">

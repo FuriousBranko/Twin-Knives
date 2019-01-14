@@ -32,9 +32,9 @@ class User
     public static function register(array $data)
     {
         $error = 0;
-
+        $conn = Database::getInstance()->getConnection();
         foreach($data as $key => $value) {
-            $$key = $value;
+            $$key = $conn->escape_string($value);
         }
 
         if($password === $rePassword) {
@@ -62,38 +62,38 @@ class User
     }
 
     // return true/false
-    public static function forgottenPassword(string $email)
-    {
-        $error = 0;
-
-        if(!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
-            return false;
-        }
-        $sql = "SELECT * FROM users WHERE email = '$email';";
-        $result = Database::getInstance()->getConnection()->query($sql);
-
-        if($result->num_rows > 0) {
-            $emailHash = md5($email);
-            $subject = "Password reset";
-            $message = "Reset your password : <a href=\"forgottenpassword.php&key=$emailHash\"> here </a>";
-            echo $message;
-            // if(mail($email, $subject, $message)) {
-            //     return true;
-            // }
-        } else {
-            // check email
-        }
-    }
+    // public static function forgottenPassword(string $email)
+    // {
+    //     $error = 0;
+    //
+    //     if(!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
+    //         return false;
+    //     }
+    //     $sql = "SELECT * FROM users WHERE email = '$email';";
+    //     $result = Database::getInstance()->getConnection()->query($sql);
+    //
+    //     if($result->num_rows > 0) {
+    //         $emailHash = md5($email);
+    //         $subject = "Password reset";
+    //         $message = "Reset your password : <a href=\"forgottenpassword.php&key=$emailHash\"> here </a>";
+    //         echo $message;
+    //         // if(mail($email, $subject, $message)) {
+    //         //     return true;
+    //         // }
+    //     } else {
+    //         // check email
+    //     }
+    // }
 
     // oldPassword, newPassword, rePassword, id
     public static function resetPassword(array $data)
     {
       $required = ['oldPassword', 'newPassword', 'rePassword', 'id'];
       $missingKeys = array_diff_key(array_flip($required), $data);
-
+      $conn = Database::getInstance()->getConnection();
       if(empty($missingKeys)) {
         foreach($data as $key => $value) {
-          $$key = $value;
+          $$key = $conn->escape_string($value);
         }
       } else {
         return false; // someone change names in form
@@ -101,15 +101,14 @@ class User
 
       if($newPassword === $rePassword) {
         $sql = "SELECT * FROM users WHERE id = '$id';";
-        $connection = Database::getInstance()->getConnection();
-        $result = $connection->query($sql);
+        $result = $conn->query($sql);
         // if user exist with that id
         if($result->num_rows > 0) {
           while($row = $result->fetch_assoc()) {
             if(Password::verify($oldPassword, $row['password'])) { // if is old password okay
               $newPassword = Password::new($newPassword);
               $sql = "UPDATE users SET password = '$newPassword' WHERE id = '$id';"; // update new password
-              if($result = $connection->query($sql)) {
+              if($result = $conn->query($sql)) {
                 return true;
               } else {
                 return false; // problem with query for update
@@ -128,8 +127,8 @@ class User
       }
       $params = rtrim($params, ', ');
       $sql = "SELECT $params FROM users WHERE id = '$id';";
-      $connection = Database::getInstance()->getConnection();
-      $result = $connection->query($sql);
+      $conn = Database::getInstance()->getConnection();
+      $result = $conn->query($sql);
       if($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
           return $row;
