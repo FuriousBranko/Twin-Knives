@@ -34,7 +34,7 @@ class Comment
                                    <div class=\"col-md-4 client-image\">
                                         ".$rating."
                                    </div>
-									<div class=\"col-md-8 text-center\">
+									<div class=\"col-md-8\">
 										<p>“<i> ".$row['comment']." </i>”</p>
 									
 									</div>
