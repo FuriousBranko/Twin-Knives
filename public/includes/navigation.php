@@ -6,7 +6,6 @@
                 <ul class="navbar-nav ml-auto sf-js-enabled sf-arrows" >
                     <li class="nav-item"> <a id="index" class="nav-link" href="index">Home</a> </li>
                     <li class="nav-item"> <a id="menu" class="nav-link" href="menu">Menu</a> </li>
-                    <li class="nav-item"> <a id="reservation" class="nav-link" href="reservation">Reservation</a> </li>
                     <li class="nav-item"> <a id="contactUs" class="nav-link" href="contact-us">Contact Us</a> </li>
                     <?php if(!Session::exist('user')): ?>
                         <li class="nav-item"> <a id="login" class="nav-link" href="login">Log In</a> </li>
