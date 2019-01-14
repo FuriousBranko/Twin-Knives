@@ -19,20 +19,21 @@ class Food
         }
     }
 
-    public static function fetchMenu(array $params = ['price' => '*', 'diet' => '*'])
+    public static function fetchMenu(array $params = ['price' => '', 'diet' => ''])
     {
         $sql = "SELECT * FROM food";
+        if(!empty($params)) {
+            if($params['diet'] == 'vegan') {
+                $sql .= " WHERE diet = 'vegan' ";
+            } elseif ($params['diet'] == 'keto') {
+                $sql .= " WHERE diet = 'keto' ";
+            }
 
-        if($params['diet'] == 'vegan') {
-            $sql .= " WHERE diet = 'vegan' ";
-        } elseif ($params['diet'] == 'keto') {
-            $sql .= " WHERE diet = 'keto' ";
-        }
-
-        if($params['price'] == "up") {
-            $sql .= " ORDER BY price DESC;";
-        } elseif ($params['price'] == "down") {
-            $sql .= " ORDER BY price ASC;";
+            if($params['price'] == "up") {
+                $sql .= " ORDER BY price DESC;";
+            } elseif ($params['price'] == "down") {
+                $sql .= " ORDER BY price ASC;";
+            }
         }
         $connection = Database::getInstance()->getConnection();
         $result = $connection->query($sql);
@@ -55,6 +56,37 @@ class Food
                     </div>
                 </div>
                 <?php $htmlResponse .= ob_get_clean();
+            }
+        }
+        return $htmlResponse;
+    }
+
+    public static function fetchSpecial()
+    {
+        $sql = "SELECT * FROM food";
+        $connection = Database::getInstance()->getConnection();
+        $result = $connection->query($sql);
+        $htmlResponse = "";
+
+        if($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                ob_start();
+                ?>
+                <div class="item wow">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="hovereffect">
+                            <a href="<?php echo 'food/'.$row['id'].'/'.$row['name']; ?>"><img src="<?php echo $row['image']?>" alt="special menu item"></a>
+                            <div class="overlay">
+                                <h4><?php echo $row['name']; ?></h4>
+                                <p><?php echo "Diet: " . $row['diet']; ?></p>
+                                <h5>$<?php echo $row['price']; ?></h5>
+                                <a href="<?php echo 'food/'.$row['id'].'/'.$row['name']; ?>" class="btn btn-info">VIEW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                $htmlResponse .= ob_get_clean();
             }
         }
         return $htmlResponse;

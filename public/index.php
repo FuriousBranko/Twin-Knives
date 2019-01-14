@@ -54,58 +54,7 @@
 			</div>
 			<div class="row">
 				<div class="owl-carousel special-menu-carousel">
-					<div class="item wow">
-						<div class="col-md-12 col-sm-12">
-							<div class="hovereffect">
-								<a href="#"><img src="images/thumb1.jpg" alt="special menu item"></a>
-								<div class="overlay">
-									<h4>LOREM IPSUM</h4>
-									<p>CATEGORY</p>
-									<h5>$25</h5>
-									<a href="detail-page.php" class="btn btn-info">VIEW</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item wow">
-						<div class="col-md-12 col-sm-12">
-							<div class="hovereffect">
-								<a href="#"><img src="images/thumb2.jpg" alt="special menu item"></a>
-								<div class="overlay">
-									<h4>LOREM IPSUM</h4>
-									<p>CATEGORY</p>
-									<h5>$25</h5>
-									<a href="detail-page.php" class="btn btn-info">VIEW</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item wow">
-						<div class="col-md-12 col-sm-12">
-							<div class="hovereffect">
-								<a href="#"><img src="images/thumb3.jpg" alt="special menu item"></a>
-								<div class="overlay">
-									<h4>LOREM IPSUM</h4>
-									<p>CATEGORY</p>
-									<h5>$25</h5>
-									<a href="detail-page.php" class="btn btn-info">VIEW</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item wow">
-						<div class="col-md-12 col-sm-12">
-							<div class="hovereffect">
-								<a href="#"><img src="images/thumb4.jpg" alt="special menu item"></a>
-								<div class="overlay">
-									<h4>LOREM IPSUM</h4>
-									<p>CATEGORY</p>
-									<h5>$25</h5>
-									<a href="detail-page.php" class="btn btn-info">VIEW</a>
-								</div>
-							</div>
-						</div>
-					</div>
+                    <?php echo Food::fetchSpecial(); ?>
 				</div>
 			</div>
 		</div>
@@ -123,7 +72,6 @@
 							<?php
 							Comment::get();
                 			?>
-							
 						</div>
 					</div>
 				</div>
