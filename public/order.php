@@ -9,7 +9,11 @@
 	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
     if(isset($_POST['push'])) {
-        Comment::push($_POST);
+        if(Comment::push($_POST)) {
+            $message = "Success.";
+        } else {
+            $message = "Fail.";
+        }
     }
 ?>
 <style>
@@ -97,7 +101,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="form-btn text-center">
-                                    <button type="submit" class="btn btn-info">Send</button>
+                                    <button type="submit" class="btn btn-info" name="push">Send</button>
                                 </div>
                             </div>
                         </form>

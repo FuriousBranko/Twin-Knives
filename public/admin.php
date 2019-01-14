@@ -48,19 +48,19 @@
                                 required>
                         </div>
                         <!-- za ovog sledeceg neznam sta ti je bolje textbox ili samo text ako me kontas -->
-                        <div class="row">
-                        <div class="form-group col-md-6">
-                            <input type="text" name="menuIngridient" class="form-control" id="menuIngridient" placeholder="Ingridient"
-                                required>
-                        </div>  
-                        <div class="form-group col-md-6">      
-                            <input type="text" name="menuAmount" class="form-control" id="menuAmount" placeholder="Amount"
-                                required>
-                        </div>    
+                        <div class="row" id="infoRow">
+                            <div class="form-group col-md-6">
+                                <input type="text" name="menuIngridient" class="form-control" id="menuIngridient" placeholder="Ingridient"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" name="menuAmount" class="form-control" id="menuAmount" placeholder="Amount"
+                                    required>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="form-btn plus text-center">
-                                <button type="button" class="btn btn-info" name="addMenu"><i class="fa fa-plus-circle"></i></button>
+                                <button type="button" class="btn btn-info" name="addMenu" id="addNewInput"><i class="fa fa-plus-circle"></i></button>
                             </div>
                         </div>
                         <div class="form-group">
@@ -225,6 +225,14 @@
     </div>
 
 </body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var info = $("#infoRow").html();
+        $("#addNewInput").click(function() {
+            $("#infoRow").append(info);
+        });
+    });
+</script>
 <?php require_once 'includes/js.php'; ?>
 
 </html>

@@ -39,11 +39,11 @@
                 </div>
                 <div class="col-md-6 special-menu-content">
                     <h3><?php echo $food['name']; ?></h3>
-                    <h6><?php echo "Vrsta"; ?></h6>
+                    <h6><?php echo "Dijeta: " . $food['diet']; ?></h6>
                     <p><?php foreach($food['information'] as $key => $value) {
-                        echo "$key : $value <br>";
+                        echo ucwords($key) . " : $value <br>";
                     } ?></p>
-                    <h4>Price<span><?php echo $food['price']; ?></span></h4>
+                    <h4>Price<span><?php echo $food['price'] . "$"; ?></span></h4>
                     <div class="special-menu-btn">
                     <?php if(!Session::exist('user')): ?>
                         <a href="register" class="btn btn-info">Add</a>

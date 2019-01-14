@@ -51,7 +51,7 @@
     			</div>
     			<!-- oces ovako da moze da bira samo 1 sastojak ili vise ? --
     			<div class="col-md-2 form-cols">
-					
+
     				<div class="form-group" id="default-selects2">
               <input type="checkbox" name="diet" value="Egg"> Egg
               <input type="checkbox" name="diet" value="Tomato"> Tomato
@@ -87,78 +87,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="text-center">Menu</h2>
-					<div class="menu-listing-1">
-						<div class="col-md-5 menu-image">
-							<div class="menu-inner-image">
-								<a href="#"><img src="images/thumb2.jpg" alt="menu image" class="img-responsive"></a>
-							</div>
-						</div>
-						<div class="col-md-7 menu-content">
-							<h4><a href="detail-page.html">Lorem Ipsum Dolor</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-							<p class="price"><a href="#"><span>add</span></a><span>$</span>10</p>
-						</div>
-					</div>
-					<div class="menu-listing-1">
-						<div class="col-md-5 menu-image">
-							<div class="menu-inner-image">
-								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
-							</div>
-						</div>
-						<div class="col-md-7 menu-content">
-							<h4><a href="detail-page.html">Lorem Ipsum Dolor</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-							<p class="price"><span>$</span>10</p>
-						</div>
-					</div>
-					<div class="menu-listing-1">
-						<div class="col-md-5 menu-image">
-							<div class="menu-inner-image">
-								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
-							</div>
-						</div>
-						<div class="col-md-7 menu-content">
-							<h4><a href="detail-page.html">Lorem Ipsum Dolor</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-							<p class="price"><span>$</span>10</p>
-						</div>
-					</div>
-					<div class="menu-listing-1">
-						<div class="col-md-5 menu-image">
-							<div class="menu-inner-image">
-								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
-							</div>
-						</div>
-						<div class="col-md-7 menu-content">
-							<h4><a href="detail-page.html">Lorem Ipsum Dolor</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-							<p class="price"><span>$</span>10</p>
-						</div>
-					</div>
-					<div class="menu-listing-1">
-						<div class="col-md-5 menu-image">
-							<div class="menu-inner-image">
-								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
-							</div>
-						</div>
-						<div class="col-md-7 menu-content">
-							<h4><a href="detail-page.html">Lorem Ipsum Dolor</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-							<p class="price"><span>$</span>10</p>
-						</div>
-					</div>
-					<div class="menu-listing-1">
-						<div class="col-md-5 menu-image">
-							<div class="menu-inner-image">
-								<img src="images/thumb2.jpg" alt="menu image" class="img-responsive">
-							</div>
-						</div>
-						<div class="col-md-7 menu-content">
-							<h4><a href="detail-page.html">Lorem Ipsum Dolor</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-							<p class="price"><span>$</span>10</p>
-						</div>
-					</div>
+					<?php echo Food::fetchMenu(); ?>
 				</div>
 			</div>
 		</div>

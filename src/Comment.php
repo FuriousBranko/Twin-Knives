@@ -4,7 +4,7 @@ require_once dirname(__DIR__) . '/config/configuration.php';
 
 class Comment
 {
-public static function get()
+    public static function get()
     {
         $sql = "SELECT comment, rate FROM comment ORDER BY RAND() LIMIT 3;";
         $connection = Database::getInstance()->getConnection();
@@ -27,23 +27,27 @@ public static function get()
         }
     }
 
-public static function push(array $data)
-{
-    $sql = "SELECT code FROM order;";
-    $connection = Database::getInstance()->getConnection();
-    $result = $connection->query($sql);
-    if($result->num_rows > 0){
-        while($row = $result->fetch_assoc()){
-            $code[] = $row['code'];
-            echo $row['code'];
+    public static function push(array $data)
+    {
+        $sql = "SELECT `code` FROM `order`";
+        $connection = Database::getInstance()->getConnection();
+        $result = $connection->query($sql);
+        if($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $code[] = $row['code'];
+            }
         }
+        foreach($data as $key => $value) {
+            $$key = $value;
         }
-    foreach($data as $key => $value) {
-        $$key = $value;
+        if(in_array($codeFK, $code)){
+            $sql = "INSERT INTO comment(codeFK, comment, rate) ";
+            $sql.= "VALUES('$codeFK', '$comment', '$rating');";
+            if($result = $connection->query($sql)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
-    if(in_array($codeFK, $code)){
-    $sql = "INSERT INTO comment(codeFK, comment, rate)";
-    $sql.= "VALUES('$codeFK', '$comment', '$rating');";
-    }
-}
 }
