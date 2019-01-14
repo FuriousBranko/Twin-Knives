@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2019 at 01:17 PM
+-- Generation Time: Jan 14, 2019 at 01:49 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -66,7 +66,13 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`id`, `name`, `price`, `information`, `diet`, `image`) VALUES
-(1, 'Aasd', 123, '{\"brasno\":\"250g\",\"Nesto\":\"240g\"}', '', '');
+(1, 'Omlet', 5, '{\"egg\":\"3\",\"milk\":\"10ml\"}', 'keto', ''),
+(2, 'Salad', 2, '{\"carrot\":\"200g\",\"cabbage\":\"300g\",\"garlic\":\"3\"}', 'vegan', ''),
+(3, 'Onion soup', 5, '{\"onion\":\"500g\",\"carrot\":\"100g\",\"celery\":\"100g\"}', 'keto', ''),
+(4, 'Strifry', 13, '{\"onion\":\"100g\",\"pepper\":\"250g\",\"chicken\":\"200g\",\"duck fat\":\"50g\"}', 'keto', ''),
+(5, 'Steak', 15, '{\"steak\":\"500g\",\"butter\":\"50g\",\"garlic\":\"3\"}', 'keto', ''),
+(6, 'BBQ vegetables', 8, '{\"eggplant\":\"200g\",\"pepper\":\"300g\",\"mushrooms\":\"100g\"}', 'vegan', ''),
+(7, 'Mushroom soup', 10, '{\"mushroom\":\"400g\",\"onion\":\"100g\",\"celery\":\"100g\",\"carrot\":\"100g\"}', 'vegan', '');
 
 -- --------------------------------------------------------
 
@@ -178,7 +184,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `order`
