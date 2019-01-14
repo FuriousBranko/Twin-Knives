@@ -7,6 +7,9 @@
     $keywords = "Something, very, interesting, about, this, hackaton";
     $description = "Something very interesting";
     require_once 'includes/headData.php';
+    if(Session::get('permission') != 1) {
+        Redirect::to('index');
+    }
 ?>
 
 <body>
@@ -143,7 +146,7 @@
                         </div>
                         <div class="modal-body">
 
-                            
+
 
                         </div>
                         <div class="modal-footer">

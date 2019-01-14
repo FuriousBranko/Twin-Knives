@@ -14,7 +14,9 @@
                             <a class="nav-link" href="profile" id="navbarDropdownProfileLink" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">Profile <i class="fa fa-chevron-down"></i></a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownProfileLink">
                                 <a class="dropdown-item" href="profile">Profil</a>
+                                <?php if(Session::get('permission') == 1): ?>
                                 <a class="dropdown-item" href="admin">Admin Panel</a>
+                                <?php endif; ?>
                                 <a class="dropdown-item" href="order">Orders</a>
                                 <a class="dropdown-item" href="logout">Logout</a>
                             </div>

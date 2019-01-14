@@ -7,20 +7,23 @@ class User
     public static function login(string $email, string $password)
     {
         $errors = [];
-        $sql = "SELECT id, password FROM users WHERE email = '$email';";
+        $sql = "SELECT id, password, permission FROM users WHERE email = '$email';";
         $result = Database::getInstance()->getConnection()->query($sql);
-        $userId = "";
+        $userId = $permission = "";
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 $hash = $row['password'];
                 $userId = $row['id'];
+                $permission = $row['permission'];
             }
         } else {
             $errors[] = "Check your email.";
         }
 
         if(Password::verify($password, $hash)) {
-            return Session::new('user', $userId);
+            Session::new('user', $userId);
+            Session::new('permission', $permission);
+            return true;
         } else {
             $errors[] = "Check your password.";
         }
@@ -136,6 +139,5 @@ class User
       }
     }
 
-    
-}
 
+}
