@@ -52,7 +52,7 @@ class Food
                     <div class="col-md-7 menu-content">
                         <h4><a href="<?php echo 'food/'.$row['id'].'/'.$row['name']; ?>"><?php echo $row['name']?></a></h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        <p class="price"><a href="#"><span>add</span></a><span>$</span><?php echo $row['price'] ?></p>
+                        <p class="price"><a href="#"><span>Add</span></a> <span>$</span><?php echo $row['price'] ?></p>
                     </div>
                 </div>
                 <?php $htmlResponse .= ob_get_clean();

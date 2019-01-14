@@ -1,3 +1,0 @@
-Make into a popup
-
-clicking on the dish will make a popup with the information.
