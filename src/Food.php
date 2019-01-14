@@ -19,9 +19,21 @@ class Food
         }
     }
 
-    public static function fetchMenu()
+    public static function fetchMenu(array $params = ['price' => '*', 'diet' => '*'])
     {
-        $sql = "SELECT * FROM food;";
+        $sql = "SELECT * FROM food";
+
+        if($params['diet'] == 'vegan') {
+            $sql .= " WHERE diet = 'vegan' ";
+        } elseif ($params['diet'] == 'keto') {
+            $sql .= " WHERE diet = 'keto' ";
+        }
+
+        if($params['price'] == "up") {
+            $sql .= " ORDER BY price DESC;";
+        } elseif ($params['price'] == "down") {
+            $sql .= " ORDER BY price ASC;";
+        }
         $connection = Database::getInstance()->getConnection();
         $result = $connection->query($sql);
         $htmlResponse = "";
@@ -33,7 +45,7 @@ class Food
                 <div class="menu-listing-1">
                     <div class="col-md-5 menu-image">
                         <div class="menu-inner-image">
-                            <a href="<?php echo 'food/'.$row['id'].'/'.$row['name']; ?>"><img src="https://via.placeholder.com/300x300" alt="menu image" class="img-responsive"></a>
+                            <a href="<?php echo 'food/'.$row['id'].'/'.$row['name']; ?>"><img src="<?php echo $row['image'];?>" alt="menu image" class="img-responsive"></a>
                         </div>
                     </div>
                     <div class="col-md-7 menu-content">

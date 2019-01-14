@@ -34,8 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 special-menu-detail-image">
-                    <img src="images/banner1.jpg" alt="special menu detail image" class="img-responsive">
-                    <!-- <img src="<?php echo $food['image']; ?>" alt="special menu detail image" class="img-responsive"> -->
+                    <img src="<?php echo $food['image']; ?>" alt="special menu detail image" class="img-responsive">
                 </div>
                 <div class="col-md-6 special-menu-content">
                     <h3><?php echo $food['name']; ?></h3>

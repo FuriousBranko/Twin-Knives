@@ -28,56 +28,45 @@
     <section class="container">
     	<form action="#" method="get" class="serach-form-area">
     		<div class="row justify-content-center">
-    			<div class="col-md-3 form-cols">
+    			<!-- <div class="col-md-3 form-cols">
     				<input type="text" class="form-control" name="search" placeholder="what are you looging for?">
-    			</div>
+    			</div> -->
     			<div class="col-md-2 form-cols">
     				<div class="form-group" id="default-selects">
-    					<select class="form-control" name="price">
-                <option value="1">Price Down</option>
-                <option value="2">Price Up</option>
+                        <label for="price">Price: </label>
+    					<select class="form-control" name="price" id="price">
+                            <option value="any" hidden>Any</option>
+                            <option value="down">Price Down</option>
+                            <option value="up">Price Up</option>
     					</select>
 
     				</div>
 				</div>
     			<div class="col-md-2 form-cols">
     				<div class="form-group" id="default-selects">
-    					<select class="form-control" name="price">
-                <option value="1">Vegan</option>
-                <option value="2">Keto</option>
+                        <label for="diet">Diet: </label>
+    					<select class="form-control" name="diet" id="diet">
+                            <option value="any" hidden>Any</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="keto">Keto</option>
     					</select>
 
     				</div>
     			</div>
-    			<!-- oces ovako da moze da bira samo 1 sastojak ili vise ? --
-    			<div class="col-md-2 form-cols">
-
-    				<div class="form-group" id="default-selects2">
-              <input type="checkbox" name="diet" value="Egg"> Egg
-              <input type="checkbox" name="diet" value="Tomato"> Tomato
-              <input type="checkbox" name="diet" value="Beef"> Beef
-			  <input type="checkbox" name="diet" value="Chicken"> Chicken
--->
-
-        <button type="button" class="btn btn-default form-group col-md-1 dropdown-toggle" data-toggle="dropdown">Food</button>
-<ul class="dropdown-menu">
-  <li><input type="checkbox"/>&nbsp;Option 1</a></li>
-  <li><input type="checkbox"/>&nbsp;Option 2</a></li>
-  <li><input type="checkbox"/>&nbsp;Option 3</a></li>
-  <li><input type="checkbox"/>&nbsp;Option 4</a></li>
-  <li><input type="checkbox"/>&nbsp;Option 5</a></li>
-  <li><input type="checkbox"/>&nbsp;Option 6</a></li>
-</ul>
-
-
-<!-- ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; -->
-    				</div>
-    			</div>
-    			<div class="col-md-2 form-cols">
-    				<div class="form-btn ">
-    					<button type="submit" class="btn btn-info" name="search">Search</button>
-    				</div>
-    			</div>
+                <!-- <button type="button" class="btn btn-default form-group col-md-1 dropdown-toggle" data-toggle="dropdown">Food</button> -->
+                <!-- <ul class="dropdown-menu">
+                  <li><input type="checkbox"/>&nbsp;Option 1</a></li>
+                  <li><input type="checkbox"/>&nbsp;Option 2</a></li>
+                  <li><input type="checkbox"/>&nbsp;Option 3</a></li>
+                  <li><input type="checkbox"/>&nbsp;Option 4</a></li>
+                  <li><input type="checkbox"/>&nbsp;Option 5</a></li>
+                  <li><input type="checkbox"/>&nbsp;Option 6</a></li>
+                </ul> -->
+                <div class="col-md-2 form-cols">
+                    <div class="form-btn">
+                        <button type="submit" class="btn btn-info" name="search">Search</button>
+                    </div>
+                </div>
     		</div>
     	</form>
     </section>
@@ -87,7 +76,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="text-center">Menu</h2>
-					<?php echo Food::fetchMenu(); ?>
+					<?php echo (isset($_GET)) ? Food::fetchMenu($_GET) : Food::fetchMenu(); ?>
 				</div>
 			</div>
 		</div>
