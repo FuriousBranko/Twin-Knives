@@ -32,12 +32,6 @@
                         <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 footer-social">
-                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </div>
                 <div class="col-md-6 mx-auto text-center copyright">
                     <p> &copy;2019 <a href="#" class="our-info">Noo.dll</a> All Rights Reserved.<br></p>
                 </div>

@@ -46,8 +46,9 @@
                 <div class="row">
                     <div class="col-md-7 mx-auto top-banner-caption">
                         <h1>Order</h1>
-                        <p>Something smart in this paragraph</p>
-                        <div class="form-btn">
+                        <p>See your orders</p>
+                        <p>Don't forget to comment</p>
+                        <div class="form-btn plus">
                             <button type="button" class="btn btn-info form-btn" data-toggle="modal" data-target="#newcomment">Comment</button>
                         </div>
                     </div>
@@ -70,8 +71,10 @@
                             <div class="form-group">
                                 <input type="number" name="codeFK" class="form-control" id="codeFK" placeholder="Order Code">
                             </div>
-                            <input type="text" name="comment" id="comment">
-                            <div class="star-rating">
+                            <div class="form-group">
+                            <input type="text" class="form-control" name="comment" id="comment">
+                            </div>
+                            <div class="star-rating text-center">
 
                                 <input id="star-5" type="radio" name="rating" value="5">
                                 <label for="star-5" title="5 stars">
@@ -99,7 +102,7 @@
                                 </label>
 
                             </div>
-                            <div class="form-group">
+                            <div class="form-group plus">
                                 <div class="form-btn text-center">
                                     <button type="submit" class="btn btn-info" name="push">Send</button>
                                 </div>

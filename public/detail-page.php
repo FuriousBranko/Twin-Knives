@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<base href = "http://localhost/twin-knives/public/" />
+<base href = "http://localhost/GitHub/Twin-Knives-VTS/Twin-Knives/public/" />
 <?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
 <html lang="en">
 <?php

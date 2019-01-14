@@ -49,7 +49,7 @@
     <p>Adress: <?php echo $user['address']; ?></p>
     <p>Email: <?php echo $user['email']; ?></p>
     <p>Phone Number: <?php echo $user['phoneNumber']; ?></p>
-<div class="form-btn">
+<div class="form-btn plus">
     <button type="button" class="btn btn-info form-btn" data-toggle="modal" data-target="#myModal">Change password</button>
 </div>
 <!-- Modal -->
@@ -91,7 +91,7 @@
     </div>
 </div>
 
-<div class="form-btn">
+<div class="form-btn plus">
     <button type="button" class="btn btn-info form-btn" data-toggle="modal" data-target="#myModal1">Change info</button>
 </div>
 <!-- Modal -->
@@ -138,6 +138,7 @@
 
     </div>
 </div>
+<?php require_once 'includes/footer.php' ?>
 </body>
 <?php require_once 'includes/js.php'; ?>
 
