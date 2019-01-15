@@ -20,14 +20,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 mx-auto top-banner-caption">
+                        <h1>Admin Panel</h1>
+                        <p>Add and remove menu items</p>
+                        <p>See all orders</p>
                         <?php
                             if(isset($_POST['addMenu'])) {
                                 echo Food::addMenu($_POST);
                             }
+                            if(isset($_POST['deleteMenu'])) {
+                                echo Food::deleteMenu($_POST['menuId']);
+                            }
                         ?>
-                        <h1>Admin Panel</h1>
-                        <p>Add and remove menu items</p>
-                        <p>See all orders</p>
                     </div>
                 </div>
             </div>
@@ -117,7 +120,7 @@
                         <div class="modal-body">
                             <form action="#" method="post">
                                 <div class="form-group">
-                                    <input type="number" name="menuDelete" class="form-control" id="menuDelete"
+                                    <input type="number" name="menuId" class="form-control" id="menuDelete"
                                         placeholder="MenuID" required>
                                 </div>
 
