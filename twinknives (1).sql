@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2019 at 01:49 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Generation Time: Jan 15, 2019 at 01:46 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,7 +44,8 @@ INSERT INTO `comment` (`idComment`, `codeFK`, `comment`, `time`, `rate`) VALUES
 (1, '555555', 'adsss', '2019-01-13 16:49:42', 5),
 (2, '333333', 'adasdffff', '2019-01-14 10:04:23', 3),
 (3, '444444', 'qqqqq', '2019-01-14 10:05:41', 2),
-(4, '222222', 'qwerrrrrr', '2019-01-14 10:05:57', 4);
+(4, '222222', 'qwerrrrrr', '2019-01-14 10:05:57', 4),
+(5, '111111', 'asdasdassadsadadsads', '2019-01-14 13:35:09', 5);
 
 -- --------------------------------------------------------
 
@@ -66,13 +67,13 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`id`, `name`, `price`, `information`, `diet`, `image`) VALUES
-(1, 'Omlet', 5, '{\"egg\":\"3\",\"milk\":\"10ml\"}', 'keto', ''),
-(2, 'Salad', 2, '{\"carrot\":\"200g\",\"cabbage\":\"300g\",\"garlic\":\"3\"}', 'vegan', ''),
-(3, 'Onion soup', 5, '{\"onion\":\"500g\",\"carrot\":\"100g\",\"celery\":\"100g\"}', 'keto', ''),
-(4, 'Strifry', 13, '{\"onion\":\"100g\",\"pepper\":\"250g\",\"chicken\":\"200g\",\"duck fat\":\"50g\"}', 'keto', ''),
-(5, 'Steak', 15, '{\"steak\":\"500g\",\"butter\":\"50g\",\"garlic\":\"3\"}', 'keto', ''),
-(6, 'BBQ vegetables', 8, '{\"eggplant\":\"200g\",\"pepper\":\"300g\",\"mushrooms\":\"100g\"}', 'vegan', ''),
-(7, 'Mushroom soup', 10, '{\"mushroom\":\"400g\",\"onion\":\"100g\",\"celery\":\"100g\",\"carrot\":\"100g\"}', 'vegan', '');
+(1, 'Omlet', 5, '{\"egg\":\"3\",\"milk\":\"10ml\"}', 'keto', 'images/Omlet.jpg'),
+(2, 'Salad', 2, '{\"carrot\":\"200g\",\"cabbage\":\"300g\",\"garlic\":\"3\"}', 'vegan', 'images/Salad.jpg'),
+(3, 'Onion soup', 5, '{\"onion\":\"500g\",\"carrot\":\"100g\",\"celery\":\"100g\"}', 'keto', 'images/Onion_soup.jpg'),
+(4, 'Strifry', 13, '{\"onion\":\"100g\",\"pepper\":\"250g\",\"chicken\":\"200g\",\"duck fat\":\"50g\"}', 'keto', 'images/Stirfry.jpeg'),
+(5, 'Steak', 15, '{\"steak\":\"500g\",\"butter\":\"50g\",\"garlic\":\"3\"}', 'keto', 'images/Steak.jpg'),
+(6, 'BBQ vegetables', 8, '{\"eggplant\":\"200g\",\"pepper\":\"300g\",\"mushrooms\":\"100g\"}', 'vegan', 'images/BBQ_Vegetables.jpg'),
+(7, 'Mushroom soup', 10, '{\"mushroom\":\"400g\",\"onion\":\"100g\",\"celery\":\"100g\",\"carrot\":\"100g\"}', 'vegan', 'images/Mushroom_Soup.jpg');
 
 -- --------------------------------------------------------
 
@@ -118,15 +119,15 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `email` varchar(30) NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `activated` tinyint(1) NOT NULL DEFAULT '0'
+  `permission` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `address`, `phoneNumber`, `password`, `email`, `created`, `activated`) VALUES
-(1, 'Radivoje', 'Pupovac', 'Partizanskih Baza 66', '0659345363', '$2y$10$eMm8XelNc2Xb9OHSI/zjHuHU5Q155oZipeY3bdp6ncfJuh5HTcl/C', 'radivoje.pupovac98@gmail.com', '2019-01-07 19:09:42', 0),
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `address`, `phoneNumber`, `password`, `email`, `created`, `permission`) VALUES
+(1, 'Radivoje', 'Pupovac', 'Partizanskih Baza 66', '0659345363', '$2y$10$eMm8XelNc2Xb9OHSI/zjHuHU5Q155oZipeY3bdp6ncfJuh5HTcl/C', 'radivoje.pupovac98@gmail.com', '2019-01-07 19:09:42', 1),
 (6, 'asdasd', 'asdasd', 'asdasdasd', '12312313232', '$2y$10$KUH5LycroklWtO.RjjpKRe..R2bFux8i2Zf13YdAnl1joru/ayCv2', '12117204@vts.su.ac.rs', '2019-01-07 19:38:07', 0),
 (7, 'Branko', 'Sabo', 'Ulcinjska 16', '123456789', '$2y$10$moe0YiAUgrerqWPYRxjTwe/o2ykaZBo3Wa1lSsDCsIUbAMOVvIsVK', 'kkk@kk.k', '2019-01-11 08:49:01', 0),
 (8, 'Branko', 'Sabo', 'Ulcinjska 16', '06123456789', '$2y$10$ehv6syCjCkhMIAsk/4lKu.RxB8B7QejXyxF6DvD.Lpo1qU6/JhqtC', 'wolfplayer98@gmail.com', '2019-01-13 23:46:53', 0);
@@ -178,13 +179,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `idComment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idComment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `order`

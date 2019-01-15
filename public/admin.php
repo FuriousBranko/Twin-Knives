@@ -159,9 +159,6 @@
                 <thead>
                     <tr>
                         <th id="" class="">
-                            Image
-                        </th>
-                        <th id="" class="">
                             Name
                         </th>
                         <th id="" class="">
@@ -174,22 +171,7 @@
                 </thead>
 
                 <tbody>
-                    <tr class="row0">
-                        <td data-title="Image" class="">
-                            <div class="">
-                                <img class="" title="" alt="" src="">
-                            </div>
-                        </td>
-                        <td data-title="Name" class="">
-                            <p class=""><a class="" href="#"><!-- Naziv Jela--></a> </p>
-                        </td>
-                        <td data-title="Price" class="">
-                            <span class=""><span class=""><!-- Cena po kom --></span> </span>
-                        </td>
-                        <td data-title="UserID" class="">
-                            <span class=""><span class=""><!-- Ukupna Cena --></span> </span>
-                        </td>
-                    </tr>
+                    <?php echo User::showOrders() ?>
                 </tbody>
             </table>
 

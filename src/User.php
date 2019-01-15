@@ -135,6 +135,31 @@ class User
       }
     }
 
-    
-}
+    public static function showOrders()
+    {
+        $htmlResponse = "";
+        $sql = "SELECT idOrder, price, idUserFK FROM `order`;";
+        $conn = Database::getInstance()->getConnection();
+        $result = $conn->query($sql);
+        if($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                ob_start(); ?>
+                <tr class="row0">
+                    <td data-title="Name" class="">
+                        <p><?php echo $row['idOrder'] ?></p>
+                    </td>
+                    <td data-title="Price" class="">
+                        <span class=""><?php echo $row['price']; ?></span>
+                    </td>
+                    <td data-title="UserID" class="">
+                        <span class=""><?php echo $row['idUserFK']; ?></span>
+                    </td>
+                </tr>
+                <?php
+                $htmlResponse .= ob_get_clean();
+            }
+        }
+        return $htmlResponse;
+    }
 
+}
