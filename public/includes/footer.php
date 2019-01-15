@@ -10,7 +10,7 @@
                 <p>Majšanski Put 666</p>
                 <p>Subotica 24000</p>
                 <p><a href="tel:+1 800 000 111">P:061 234 5678</a></p>
-                <p><a href="#">E:<span class="__cf_email__" data-cfemail="9dfef2f3e9fcfee9ddf8e5fcf0edf1f8b3fef2f0">[email&#160;protected]</span></a></p>
+                <p>Email:info@twinknives.com</p>
             </div>
             <div class="col-md-3 col-sm-12 footer-bottom-col3">
                 <h6>OPENING HOURS</h6>
