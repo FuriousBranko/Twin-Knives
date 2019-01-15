@@ -118,4 +118,14 @@ class Food
             return "Error: " . $sql . "<br>" . Database::getInstance()->getConnection()->error;
         }
     }
+
+    public static function deleteMenu(int $id)
+    {
+        $sql = "DELETE FROM food WHERE id = $id;";
+        if($result = Database::getInstance()->getConnection()->query($sql)) {
+            return "Success!";
+        } else {
+            return "Error: " . $sql . "<br>" . Database::getInstance()->getConnection()->error;
+        }
+    }
 }
