@@ -41,8 +41,8 @@
             		</div>
             		<div class="form-btn text-center">
                         <button type="submit" class="btn btn-info" name="login">Submit</button><br>
-                        <a href="registration.php">Register</a>
-                        <a href="forgottenpassword.php">Forgotten Password</a>
+                        <a href="registration">Register</a>
+                        <a href="forgottenpassword">Forgotten Password</a>
             		</div>
             	</form>
             </div>

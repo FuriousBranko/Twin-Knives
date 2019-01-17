@@ -1,4 +1,9 @@
-<?php require_once dirname(__DIR__) . '/config/configuration.php';?>
+<?php
+    require_once dirname(__DIR__) . '/config/configuration.php';
+    if(isset($_POST['order'])) {
+        // need to create function for adding this values into db;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 

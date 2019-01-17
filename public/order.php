@@ -1,15 +1,18 @@
 <?php
     require_once dirname(__DIR__) . '/config/configuration.php';
-    if(isset($_POST['push'])) {
-        if(Comment::push($_POST)) {
-            $message = "Success.";
-        } else {
-            $message = "Fail.";
-        }
-    }
+
     if(Session::exist('user')) {
+        if(isset($_POST['push'])) {
+            if(Comment::push($_POST)) {
+                $message = "Success.";
+            } else {
+                $message = "Fail.";
+            }
+        }
         $user = User::data(Session::get('user'), ['firstName', 'lastName', 'email', 'address', 'phoneNumber']);
         $user['fullName'] = $user['firstName'] . " " . $user['lastName'];
+    } else {
+        Redirect::to('index');
     }
 ?>
 <!DOCTYPE html>
@@ -140,11 +143,8 @@
                 </thead>
 
                 <tbody>
-                    <?php echo Food::showOrder(); ?>
-                </tbody>
-
-                <tfoot>
                     <form action="index" method="post">
+                    <?php echo Food::showOrder(); ?>
                         <label for="name">Full name:</label>
                         <input type="text" name="name" value="<?php echo $user['fullName']; ?>" id="name"><br>
                         <label for="address">Adress:</label>
@@ -152,9 +152,10 @@
                         <label for="email">Email:</label>
                         <input type="text" name="email" value="<?php echo $user['email']; ?>" id="email"><br>
                         <label for="phone">Phone Number:</label>
-                        <input type="text" name="phone" value="<?php echo $user['phoneNumber']; ?>" id="phone">
+                        <input type="text" name="phone" value="<?php echo $user['phoneNumber']; ?>" id="phone"><br>
+                        <input type="submit" class="btn btn-primary" name="order" value="Order">
                     </form>
-                </tfoot>
+                </tbody>
             </table>
         </div>
     </div>

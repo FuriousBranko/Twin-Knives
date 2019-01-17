@@ -52,7 +52,11 @@ class Food
                     <div class="col-md-7 menu-content">
                         <h4><a href="<?php echo 'food/'.$row['id'].'/'.$row['name']; ?>"><?php echo $row['name']?></a></h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        <p class="price"><a href="menu?food=<?php echo $row['id']; ?>"><span>Add</span></a> <span>$</span><?php echo $row['price'] ?></p>
+                        <?php if(Session::exist('user')): ?>
+                            <p class="price"><a href="menu?food=<?php echo $row['id']; ?>"><span>Add</span></a> <span>$</span><?php echo $row['price'] ?></p>
+                        <?php else: ?>
+                            <p class="price"><a href="registration"><span>Add</span></a> <span>$</span><?php echo $row['price'] ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php $htmlResponse .= ob_get_clean();
@@ -142,14 +146,17 @@ class Food
                         <img class="" title="" alt="" src="">
                     </div>
                 </td>
-                <td data-title="Name" class="">
+                <td data-title="Name">
                     <a href="<?php echo 'food/'.$food['id'].'/'.$food['name'];?>"><?php echo $food['name']; ?></a>
+                    <input type="hidden" name="name[]" value="<?php echo $food['name']; ?>">
                 </td>
-                <td data-title="Amount" class="">
+                <td data-title="Amount">
                     <p><?php echo $_SESSION['cart'][$key]; ?></p>
+                    <input type="hidden" name="amount[]" value="<?php echo $_SESSION['cart'][$key]; ?>">
                 </td>
-                <td data-title="Price" class="">
-                    <span class=""><span class=""><?php echo $food['price'] * $_SESSION['cart'][$key]; ?></span> </span>
+                <td data-title="Price">
+                    <span class=""><?php echo $food['price'] * $_SESSION['cart'][$key]; ?></span>
+                    <input type="hidden" name="price[]" value="<?php echo $food['price'] * $_SESSION['cart'][$key]; ?>">
                 </td>
             </tr>
             <?php

@@ -48,7 +48,9 @@ if(!$food) {
                     <?php if(!Session::exist('user')): ?>
                         <a href="register" class="btn btn-info">Add</a>
                     <?php else: ?>
-                        <a href="#" class="btn btn-info">Add</a>
+                        <form class="" action="menu" method="get">
+                            <input type="submit" name="food" value="<?php echo $food['id']; ?>" class="btn btn-info">Add</button>
+                        </form>
                     <?php endif; ?>
                     </div>
                 </div>

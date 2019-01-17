@@ -1,8 +1,13 @@
 <?php
     require_once dirname(__DIR__) . '/config/configuration.php';
-    if(Session::get('permission') != 1) {
+    if(Session::exist('user')) {
+        if(Session::get('permission') != 1) {
+            Redirect::to('index');
+        }
+    } else {
         Redirect::to('index');
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

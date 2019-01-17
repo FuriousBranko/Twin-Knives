@@ -10,13 +10,15 @@
     require_once 'includes/headData.php';
     if(isset($_GET['food'])) {
         $id = $_GET['food'];
+        $foodName = Food::fetch($id);
+
         if(isset($_SESSION['cart'][$id])) {
             $a = $_SESSION['cart'][$id];
             Food::addToCart($id, ++$a);
         } else {
             Food::addToCart($id, 1);
         }
-        $message = "Added to the cart. <a href=\"order\"> List of orders </a>";
+        $message = $foodName['name'] . " added to the cart. <a href=\"order\"> List of orders </a>";
     }
 ?>
 
