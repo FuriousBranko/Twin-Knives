@@ -10,7 +10,7 @@ class Mail
 {
     private static $_answer;
 
-    public static function contactForm(string $name, string $email, $phone, string $message)
+    public static function contactForm($name, $email, $phone, $message)
     {
         try {
             $mail = new PHPMailer(true); // default is without true, we use true when want to use phpmailer exception

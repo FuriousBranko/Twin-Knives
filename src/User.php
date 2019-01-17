@@ -4,7 +4,7 @@ require_once dirname(__DIR__) . '/config/configuration.php';
 
 class User
 {
-    public static function login(string $email, string $password)
+    public static function login($email, $password)
     {
         $errors = [];
         $sql = "SELECT id, password FROM users WHERE email = '$email';";
@@ -24,9 +24,10 @@ class User
         } else {
             $errors[] = "Check your password.";
         }
+        return $errors;
     }
 
-    public static function register(array $data)
+    public static function register($data)
     {
         $error = 0;
         $conn = Database::getInstance()->getConnection();
@@ -35,7 +36,7 @@ class User
         }
 
         if($password === $rePassword) {
-            $password = Password::new($password);
+            $password = Password::newSession($password);
         } else {
             $error++;
         }
@@ -83,7 +84,7 @@ class User
     // }
 
     // oldPassword, newPassword, rePassword, id
-    public static function resetPassword(array $data)
+    public static function resetPassword($data)
     {
       $required = ['oldPassword', 'newPassword', 'rePassword', 'id'];
       $missingKeys = array_diff_key(array_flip($required), $data);
@@ -116,7 +117,7 @@ class User
       }
     }
 
-    public static function data(int $id, array $what)
+    public static function data($id, $what)
     {
       $params = "";
       foreach($what as $value) {

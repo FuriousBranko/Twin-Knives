@@ -46,7 +46,7 @@ class Comment
         }
     }
 
-    public static function push(array $data)
+    public static function push($data)
     {
         $sql = "SELECT `code` FROM `order`";
         $conn = Database::getInstance()->getConnection();

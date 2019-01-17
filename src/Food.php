@@ -4,7 +4,7 @@ require_once dirname(__DIR__) . '/config/configuration.php';
 
 class Food
 {
-    public static function fetch(int $id)
+    public static function fetch($id)
     {
         $sql = "SELECT * FROM food WHERE id = $id;";
         $result = Database::getInstance()->getConnection()->query($sql);
@@ -19,7 +19,7 @@ class Food
         }
     }
 
-    public static function fetchMenu(array $params = ['price' => '', 'diet' => ''])
+    public static function fetchMenu($params = ['price' => '', 'diet' => ''])
     {
         $sql = "SELECT * FROM food";
         if(!empty($params)) {
@@ -92,7 +92,7 @@ class Food
         return $htmlResponse;
     }
 
-    public static function addMenu(array $data)
+    public static function addMenu($data)
     {   // array_combine($keys, $values) : array
         $required = ['menuName', 'menuPrice', 'menuDiet', 'menuImg'];
         $conn = Database::getInstance()->getConnection();
@@ -119,7 +119,7 @@ class Food
         }
     }
 
-    public static function deleteMenu(int $id)
+    public static function deleteMenu($id)
     {
         $sql = "DELETE FROM food WHERE id = $id;";
         if($result = Database::getInstance()->getConnection()->query($sql)) {

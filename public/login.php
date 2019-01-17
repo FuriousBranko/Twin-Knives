@@ -30,7 +30,7 @@
     <div id="container">
             <div class="reservation-form-inner col-md-4 offset-md-4">
             	<h3>Login</h3>
-            	<form action="#" method="post">
+            	<form action="login" method="post">
             		<div class="form-group">
             			<input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
             		</div>
