@@ -1,4 +1,10 @@
-<?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
+<?php
+    require_once dirname(__DIR__) . '/config/configuration.php';
+    if(isset($_POST['login'])) {
+        User::login($_POST['email'], $_POST['password']);
+    }
+    if(!Session::exist('user')):
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,10 +14,6 @@
 	$description = "Something very interesting";
 	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
-    if(isset($_POST['login'])) {
-        User::login($_POST['email'], $_POST['password']);
-    }
-    if(!Session::exist('user')):
 ?>
 <body>
     <?php require_once 'includes/navigation.php'; ?>

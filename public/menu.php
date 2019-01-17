@@ -16,6 +16,7 @@
         } else {
             Food::addToCart($id, 1);
         }
+        $message = "Added to the cart. <a href=\"order\"> List of orders </a>";
     }
 ?>
 
@@ -28,6 +29,7 @@
 					<div class="col-md-7 mx-auto top-banner-caption">
 						<h1>Menu</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                        <p><?php echo (isset($message)) ? $message : ""; ?></p>
 					</div>
 				</div>
 			</div>

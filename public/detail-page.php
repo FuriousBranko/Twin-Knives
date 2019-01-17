@@ -1,4 +1,10 @@
-<?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
+<?php
+require_once dirname(__DIR__) . '/config/configuration.php';
+$food = Food::fetch($_GET['id']);
+if(!$food) {
+    Redirect::to("index");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <base href = "http://localhost/Twin-Knives/public/" />
@@ -7,11 +13,6 @@
     $keywords = "Something, very, interesting, about, this, hackaton";
     $description = "Something very interesting";
     require_once 'includes/headData.php';
-
-    $food = Food::fetch($_GET['id']);
-    if(!$food) {
-        Redirect::to("404");
-    }
 ?>
 
 <body>

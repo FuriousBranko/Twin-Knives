@@ -11,7 +11,7 @@
     // Provera dal je ulogovan, ako nije onda ga redirectuje na index
     if(Session::exist('user')) {
       $id = Session::get('user');
-      $user = User::data(1,['firstName','lastName','phoneNumber','email','address']);
+      $user = User::data($id ,['firstName','lastName','phoneNumber','email','address']);
       $user['fullName'] = $user['firstName'] . " " . $user['lastName'];
       if(isset($_POST['change'])) {
         $data = [

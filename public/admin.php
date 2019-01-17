@@ -1,4 +1,9 @@
-<?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
+<?php
+    require_once dirname(__DIR__) . '/config/configuration.php';
+    if(Session::get('permission') != 1) {
+        Redirect::to('index');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,10 +12,6 @@
     $keywords = "Something, very, interesting, about, this, hackaton";
     $description = "Something very interesting";
     require_once 'includes/headData.php';
-    if(Session::get('permission') != 1) {
-        Redirect::to('index');
-    }
-
 ?>
 
 <body>

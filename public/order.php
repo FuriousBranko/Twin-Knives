@@ -1,4 +1,17 @@
-<?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
+<?php
+    require_once dirname(__DIR__) . '/config/configuration.php';
+    if(isset($_POST['push'])) {
+        if(Comment::push($_POST)) {
+            $message = "Success.";
+        } else {
+            $message = "Fail.";
+        }
+    }
+    if(Session::exist('user')) {
+        $user = User::data(Session::get('user'), ['firstName', 'lastName', 'email', 'address', 'phoneNumber']);
+        $user['fullName'] = $user['firstName'] . " " . $user['lastName'];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,13 +21,6 @@
 	$description = "Something very interesting";
 	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
-    if(isset($_POST['push'])) {
-        if(Comment::push($_POST)) {
-            $message = "Success.";
-        } else {
-            $message = "Fail.";
-        }
-    }
 ?>
 <style>
 .star-rating {
@@ -140,13 +146,13 @@
                 <tfoot>
                     <form action="index" method="post">
                         <label for="name">Full name:</label>
-                        <input type="text" name="" value="" id="name"><br>
+                        <input type="text" name="name" value="<?php echo $user['fullName']; ?>" id="name"><br>
                         <label for="address">Adress:</label>
-                        <input type="text" name="" value="" id="address"><br>
+                        <input type="text" name="address" value="<?php echo $user['address']; ?>" id="address"><br>
                         <label for="email">Email:</label>
-                        <input type="text" name="" value="" id="email"><br>
+                        <input type="text" name="email" value="<?php echo $user['email']; ?>" id="email"><br>
                         <label for="phone">Phone Number:</label>
-                        <input type="text" name="" value="" id="phone">
+                        <input type="text" name="phone" value="<?php echo $user['phoneNumber']; ?>" id="phone">
                     </form>
                 </tfoot>
             </table>
