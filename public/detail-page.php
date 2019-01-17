@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<base href = "http://localhost/Twin-Knives/public/" />
 <?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
+<!DOCTYPE html>
 <html lang="en">
+<base href = "http://localhost/Twin-Knives/public/" />
 <?php
     $title = "TwinKnives";
     $keywords = "Something, very, interesting, about, this, hackaton";

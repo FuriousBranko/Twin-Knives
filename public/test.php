@@ -41,7 +41,7 @@ body {
     <form action="">
     <textarea id="textarea" rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 148px;"></textarea>
 <div class="star-rating">
-    
+
     <input id="star-5" type="radio" name="rating" value="5">
     <label for="star-5" title="5 stars">
         <i class="fa fa-star fa-xs"></i>
@@ -66,7 +66,7 @@ body {
     <label for="star-1" title="1 star">
         <i class="fa fa-star fa-xs"></i>
     </label>
-    
+
 </div>
 </form>
 </body>

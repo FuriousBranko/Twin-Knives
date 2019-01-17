@@ -1,5 +1,5 @@
+<?php require_once dirname(__DIR__) . '/config/configuration.php';?>
 <!DOCTYPE html>
-<?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
 <html lang="en">
 
 <?php

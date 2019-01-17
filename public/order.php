@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <?php
@@ -134,24 +134,21 @@
                 </thead>
 
                 <tbody>
-                    <tr class="row0">
-                        <td data-title="Image" class="">
-                            <div class="">
-                                <img class="" title="" alt="" src="">
-                            </div>
-                        </td>
-                        <td data-title="Name" class="">
-                            <p class=""><a class="" href="#"><!-- Naziv Jela--></a> </p>
-                        </td>
-                        <td data-title="Amount" class="">
-                            <p></p>
-                        </td>
-                        <td data-title="Price" class="">
-                            <span class=""><span class=""><!-- Cena po kom --></span> </span>
-                        </td>
-                    </tr>
-
+                    <?php echo Food::showOrder(); ?>
                 </tbody>
+
+                <tfoot>
+                    <form action="index" method="post">
+                        <label for="name">Full name:</label>
+                        <input type="text" name="" value="" id="name"><br>
+                        <label for="address">Adress:</label>
+                        <input type="text" name="" value="" id="address"><br>
+                        <label for="email">Email:</label>
+                        <input type="text" name="" value="" id="email"><br>
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" name="" value="" id="phone">
+                    </form>
+                </tfoot>
             </table>
         </div>
     </div>

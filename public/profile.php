@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <?php
@@ -22,14 +22,14 @@
         ];
         User::resetPassword($data);
       }
-  
+
       if(isset($_POST['edit'])) {
         User::edit($id, $_POST);
       }
     } else {
       Redirect::to("index");
     }
-    
+
 ?>
 
 <body>

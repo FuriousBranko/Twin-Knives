@@ -52,7 +52,7 @@ class Food
                     <div class="col-md-7 menu-content">
                         <h4><a href="<?php echo 'food/'.$row['id'].'/'.$row['name']; ?>"><?php echo $row['name']?></a></h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        <p class="price"><a href="#"><span>Add</span></a> <span>$</span><?php echo $row['price'] ?></p>
+                        <p class="price"><a href="menu?food=<?php echo $row['id']; ?>"><span>Add</span></a> <span>$</span><?php echo $row['price'] ?></p>
                     </div>
                 </div>
                 <?php $htmlResponse .= ob_get_clean();
@@ -127,5 +127,40 @@ class Food
         } else {
             return "Error: " . $sql . "<br>" . Database::getInstance()->getConnection()->error;
         }
+    }
+
+    public static function showOrder()
+    {
+        $htmlResponse = "";
+        if(!empty(Session::exist('cart'))):
+            foreach(Session::get('cart') as $key => $value):
+                $food = Food::fetch($key);
+            ob_start(); ?>
+            <tr class="row0">
+                <td data-title="Image" class="">
+                    <div class="">
+                        <img class="" title="" alt="" src="">
+                    </div>
+                </td>
+                <td data-title="Name" class="">
+                    <a href="<?php echo 'food/'.$food['id'].'/'.$food['name'];?>"><?php echo $food['name']; ?></a>
+                </td>
+                <td data-title="Amount" class="">
+                    <p><?php echo $_SESSION['cart'][$key]; ?></p>
+                </td>
+                <td data-title="Price" class="">
+                    <span class=""><span class=""><?php echo $food['price'] * $_SESSION['cart'][$key]; ?></span> </span>
+                </td>
+            </tr>
+            <?php
+            endforeach;
+            $htmlResponse .= ob_get_clean();
+        endif;
+        return $htmlResponse;
+    }
+
+    public static function addToCart($id, $amount)
+    {
+        return Session::cart($id, $amount);
     }
 }

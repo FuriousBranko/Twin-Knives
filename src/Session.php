@@ -18,4 +18,13 @@ class Session
     {
       return (isset($_SESSION[$name])) ? $_SESSION[$name] : false;
     }
+
+    public static function cart($id, $amount)
+    {
+        if(Session::exist('cart')) {
+            $_SESSION['cart'][$id] = $amount;
+        } else {
+            $_SESSION['cart'][$id] = 1;
+        }
+    }
 }

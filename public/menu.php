@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <?php require_once dirname(__DIR__) . '/config/configuration.php'; ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <?php
@@ -8,6 +8,15 @@
 	$description = "Something very interesting";
 	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
+    if(isset($_GET['food'])) {
+        $id = $_GET['food'];
+        if(isset($_SESSION['cart'][$id])) {
+            $a = $_SESSION['cart'][$id];
+            Food::addToCart($id, ++$a);
+        } else {
+            Food::addToCart($id, 1);
+        }
+    }
 ?>
 
 <body>
@@ -76,7 +85,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="text-center">Menu</h2>
-					<?php echo (isset($_GET)) ? Food::fetchMenu($_GET) : Food::fetchMenu(); ?>
+					<?php echo (isset($_GET['price']) or isset($_GET['diet'])) ? Food::fetchMenu($_GET) : Food::fetchMenu(); ?>
 				</div>
 			</div>
 		</div>
