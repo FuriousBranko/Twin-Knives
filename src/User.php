@@ -62,30 +62,6 @@ class User
         }
     }
 
-    // return true/false
-    // public static function forgottenPassword(string $email)
-    // {
-    //     $error = 0;
-    //
-    //     if(!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
-    //         return false;
-    //     }
-    //     $sql = "SELECT * FROM users WHERE email = '$email';";
-    //     $result = Database::getInstance()->getConnection()->query($sql);
-    //
-    //     if($result->num_rows > 0) {
-    //         $emailHash = md5($email);
-    //         $subject = "Password reset";
-    //         $message = "Reset your password : <a href=\"forgottenpassword.php&key=$emailHash\"> here </a>";
-    //         echo $message;
-    //         // if(mail($email, $subject, $message)) {
-    //         //     return true;
-    //         // }
-    //     } else {
-    //         // check email
-    //     }
-    // }
-
     // oldPassword, newPassword, rePassword, id
     public static function resetPassword($data)
     {

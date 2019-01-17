@@ -14,9 +14,9 @@
         User::resetPassword($data);
       }
 
-      if(isset($_POST['edit'])) {
-        User::edit($id, $_POST);
-      }
+      // if(isset($_POST['edit'])) {
+      //   User::edit($id, $_POST);
+      // }
     } else {
       Redirect::to("index");
     }
@@ -91,9 +91,9 @@
     </div>
 </div>
 
-<div class="form-btn plus">
+<!-- <div class="form-btn plus">
     <button type="button" class="btn btn-info form-btn" data-toggle="modal" data-target="#myModal1">Change info</button>
-</div>
+</div> -->
 <!-- Modal -->
 <div id="myModal1" class="modal fade" role="dialog">
     <div class="modal-dialog col-md-2">
