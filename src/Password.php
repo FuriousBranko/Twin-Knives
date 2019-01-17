@@ -4,8 +4,8 @@ require_once dirname(__DIR__) . '/config/configuration.php';
 
 class Password
 {
-    private $_hash = "";
-    private $_password = "";
+    private static $_hash = "";
+    private static $_password = "";
     // $password is typed by user, if criteria is okay
     // return is hashed password
     public static function new($password)
@@ -19,10 +19,10 @@ class Password
     public static function verify($password, $hash)
     {
         if(isset($hash) && isset($password)) {
-            $this->_password = $password;
-            $this->_hash = $hash;
+            self::$_password = $password;
+            self::$_hash = $hash;
 
-            if(password_verify($this->_password, $this->_hash)) {
+            if(password_verify(self::$_password, self::$_hash)) {
                 return true;
             } else {
                 return false;
