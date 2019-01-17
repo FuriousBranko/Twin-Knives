@@ -25,28 +25,7 @@
 	$authors = "Radivoje Pupovac & Branko Sabo";
     require_once 'includes/headData.php';
 ?>
-<style>
-.star-rating {
-    direction: rtl;
-}
-.star-rating input[type="radio"] {
-    display: none;
-}
-.star-rating > label {
-    color: #ccc;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    font-size: 50px;
-}
-.star-rating > label:hover,
-.star-rating > label:hover ~ label,
-.star-rating > input[type="radio"]:checked ~ label{
-    color: #f2b600;
-}
-</style>
+<link href="css/star.css" rel="stylesheet">
 <body>
     <?php require_once 'includes/navigation.php'; ?>
     <section id="top-banner" style="background-image:url('images/slider.jpg'); width: 100%; background-repeat: no-repeat; background-size: cover; background-position: left;">
